@@ -6,10 +6,10 @@ body {
 .navbar {
     background-color: #2C3639;
     overflow: hidden;
-  }
+}
   
   /* Style the links inside the navigation bar */
-  .navbar a {
+.navbar a {
     float: left;
     color: #A27B5C;
     text-align: center;
@@ -17,7 +17,7 @@ body {
     text-decoration: none;
     font-size: 23px;
     font-family: Impact;
-  }
+}
   
   /* Change the color of links on hover */
   .navbar a:hover {
@@ -37,41 +37,63 @@ body {
     text-align:center;
   }
 
+
+@media (max-width:599px) {
+    .col-offset-35 {
+      margin-left: 10%;
+    }
+
+    /* Style the links inside the navigation bar */
+  .navbar a {
+    padding: 14px 25px;
+    font-size: 18px;
+  }
+}
+
 @media (min-width:600px) {
     .col-offset-35 {
-      margin-left: 15%;
-      font-size: 80%;
+      margin-left: 24%;
     }
+
+    /* Style the links inside the navigation bar */
+  .navbar a {
+    padding: 14px 25px;
+    font-size: 18px;
+  }
 }
 
 @media (min-width:800px) {
     .col-offset-35 {
-      margin-left: 20%;
-      font-size: 90%;
+      margin-left: 27.5%;
     }
+     /* Style the links inside the navigation bar */
 }
 
 @media (min-width:1000px) {
     .col-offset-35 {
-      margin-left: 25%;
+      margin-left: 28%;
+    }
+    .navbar a {
+      padding: 14px 30px;
+      font-size: 23px;
     }
 }
 
 @media (min-width:1200px) {
     .col-offset-35 {
-      margin-left: 28%;
+      margin-left: 31%;
     }
 }
 
 @media (min-width:1400px) {
     .col-offset-35 {
-      margin-left: 32%;
+      margin-left: 34%;
     }
 }
 
 @media (min-width:1600px) {
     .col-offset-35 {
-      margin-left: 35%;
+      margin-left: 36.5%;
     }
 }
 
