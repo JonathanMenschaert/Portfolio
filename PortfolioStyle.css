@@ -1,33 +1,77 @@
 body {
-    background-color:rgb(44, 51, 51)
+    background-color:#3F4E4F;
 }
 
 /* Add a black background color to the top navigation */
 .navbar {
-    background-color: #395B64;
+    background-color: #2C3639;
     overflow: hidden;
   }
   
   /* Style the links inside the navigation bar */
   .navbar a {
     float: left;
-    color: #f2f2f2;
+    color: #A27B5C;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 30px;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 23px;
     font-family: Impact;
   }
   
   /* Change the color of links on hover */
   .navbar a:hover {
-    background-color: #395B64;
-    color: #A5C9CA;
+    background-color: #A27B5C;
+    color: #DCD7C9;
     text-decoration: underline
   }
   
   /* Add a color to the active/current link */
   .navbar a.active {
-    background-color: #A5C9CA;
-    color: #E7F6F2;    
+    background-color: #DCD7C9;
+    color: #2C3639;    
   }
+
+  .paragraph-body {
+    color: #DCD7C9;
+    text-align:center;
+  }
+
+@media (min-width:600px) {
+    .col-offset-35 {
+      margin-left: 15%;
+      font-size: 80%;
+    }
+}
+
+@media (min-width:800px) {
+    .col-offset-35 {
+      margin-left: 20%;
+      font-size: 90%;
+    }
+}
+
+@media (min-width:1000px) {
+    .col-offset-35 {
+      margin-left: 25%;
+    }
+}
+
+@media (min-width:1200px) {
+    .col-offset-35 {
+      margin-left: 28%;
+    }
+}
+
+@media (min-width:1400px) {
+    .col-offset-35 {
+      margin-left: 32%;
+    }
+}
+
+@media (min-width:1600px) {
+    .col-offset-35 {
+      margin-left: 35%;
+    }
+}
+
