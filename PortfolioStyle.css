@@ -1,0 +1,33 @@
+body {
+    background-color:rgb(44, 51, 51)
+}
+
+/* Add a black background color to the top navigation */
+.navbar {
+    background-color: #395B64;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .navbar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: Impact;
+  }
+  
+  /* Change the color of links on hover */
+  .navbar a:hover {
+    background-color: #395B64;
+    color: #A5C9CA;
+    text-decoration: underline
+  }
+  
+  /* Add a color to the active/current link */
+  .navbar a.active {
+    background-color: #A5C9CA;
+    color: #E7F6F2;    
+  }
