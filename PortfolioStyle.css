@@ -2,10 +2,12 @@ body {
     background-color:#3F4E4F;
 }
 
-/* Add a black background color to the top navigation */
+/* Add a dark background color to the top navigation */
 .navbar {
     background-color: #2C3639;
     overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 0px 5px 4px #1D2426, 0px -2px 4px #1D2426;
 }
   
   /* Style the links inside the navigation bar */
@@ -16,7 +18,7 @@ body {
     padding: 14px 30px;
     text-decoration: none;
     font-size: 23px;
-    font-family: Impact;
+    font-family: Calibri;
 }
   
   /* Change the color of links on hover */
@@ -26,10 +28,10 @@ body {
   }
   
   /* Add a color to the active/current link */
-  .navbar a.active {
+  /*.navbar a.active {
     background-color: #DCD7C9;
     color: #2C3639;    
-  }
+  }*/
 
   .expand {
     width: 100%;
@@ -56,16 +58,8 @@ body {
     display: block;
     position: absolute;
     top: 2px;
-    right: 0px;
+    right: 8px;
     font-size: 30px
-  }
-
-  .navbar.expand a.icon {
-    top: -5px;
-  }
-
-  .navbar.expand {
-    position:fixed;
   }
 
   .navbar.expand a {
