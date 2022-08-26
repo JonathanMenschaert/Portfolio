@@ -1,13 +1,14 @@
 body {
-    background-color:#3F4E4F;
+    background-color:#333333;
 }
 
 /* Add a dark background color to the top navigation */
 .navbar {
-    background-color: #2C3639;
+    background-color: #141414;
     overflow: hidden;
     border-radius: 30px;
-    box-shadow: 0px 5px 4px #1D2426, 0px -2px 4px #1D2426;
+    box-shadow: 0px 5px 4px #2D2D2D, 0px -2px 4px #2D2D2D;
+    margin-bottom: 50px;
 }
   
   /* Style the links inside the navigation bar */
@@ -17,8 +18,8 @@ body {
     text-align: center;
     padding: 14px 30px;
     text-decoration: none;
-    font-size: 23px;
-    font-family: Calibri;
+    font-size: 26px;
+    font-family: Arial;
 }
   
   /* Change the color of links on hover */
@@ -38,7 +39,28 @@ body {
     height: auto;
   }
 
+  .window-box {
+    background-color: #141414;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 0px 5px 4px #2D2D2D, 0px -2px 4px #2D2D2D;
+    position: relative;
+  }
+
+  .window-box-body {
+    margin: 20px;
+  }
+
   .paragraph-body {
+    color: #DCD7C9;
+    text-align:center;
+  }
+
+  .footer-body{
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 25px;
+    margin-bottom: 50px;
     color: #DCD7C9;
     text-align:center;
   }
@@ -57,7 +79,7 @@ body {
     float: right;
     display: block;
     position: absolute;
-    top: 2px;
+    top: 6px;
     right: 8px;
     font-size: 30px
   }
@@ -74,8 +96,6 @@ body {
       margin-left: 28%;
   }
   .navbar a {
-    padding: 14px 30px;
-    font-size: 23px;
     display: all;
   }
   .navbar a.icon{
