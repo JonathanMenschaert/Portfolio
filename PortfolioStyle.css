@@ -2,6 +2,13 @@ body {
     background-color:#333333;
 }
 
+hr {
+  color: #A27B5C;
+  background-color: #A27B5C;
+  border-width: 0px;
+  height: 1px;
+}
+
 /* Add a dark background color to the top navigation */
 .navbar {
     background-color: #141414;
@@ -61,7 +68,7 @@ body {
     margin-right: 30%;
     margin-top: 25px;
     margin-bottom: 50px;
-    color: #DCD7C9;
+    color: #A27B5C;
     text-align:center;
   }
 
@@ -89,6 +96,14 @@ body {
     display: block;
     text-align: left;
   }
+  .footer-body{
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    color: #A27B5C;
+    text-align:center;
+  }
 }
 
 @media (min-width:1000px) {
@@ -100,6 +115,15 @@ body {
   }
   .navbar a.icon{
     display: none;
+  }
+
+  .footer-body{
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    color: #A27B5C;
+    text-align:center;
   }
 }
 
