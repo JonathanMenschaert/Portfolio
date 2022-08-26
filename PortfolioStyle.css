@@ -21,7 +21,6 @@ body {
   
   /* Change the color of links on hover */
   .navbar a:hover {
-    background-color: #A27B5C;
     color: #DCD7C9;
     text-decoration: underline
   }
@@ -32,68 +31,79 @@ body {
     color: #2C3639;    
   }
 
+  .expand {
+    width: 100%;
+    height: auto;
+  }
+
   .paragraph-body {
     color: #DCD7C9;
     text-align:center;
   }
 
 
-@media (max-width:599px) {
-    .col-offset-35 {
-      margin-left: 10%;
-    }
-
-    /* Style the links inside the navigation bar */
-  .navbar a {
-    padding: 14px 25px;
-    font-size: 18px;
+@media (max-width:999px) {
+  .navbar-offset {
+    margin-left: 0%;
   }
-}
 
-@media (min-width:600px) {
-    .col-offset-35 {
-      margin-left: 24%;
-    }
-
-    /* Style the links inside the navigation bar */
-  .navbar a {
-    padding: 14px 25px;
-    font-size: 18px;
+  .navbar a:not(:first-child) {
+    display: none;      
   }
-}
 
-@media (min-width:800px) {
-    .col-offset-35 {
-      margin-left: 27.5%;
-    }
-     /* Style the links inside the navigation bar */
+  .navbar a.icon {
+    float: right;
+    display: block;
+    position: absolute;
+    top: 2px;
+    right: 0px;
+    font-size: 30px
+  }
+
+  .navbar.expand a.icon {
+    top: -5px;
+  }
+
+  .navbar.expand {
+    position:fixed;
+  }
+
+  .navbar.expand a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 }
 
 @media (min-width:1000px) {
-    .col-offset-35 {
+  .navbar-offset {
       margin-left: 28%;
-    }
-    .navbar a {
-      padding: 14px 30px;
-      font-size: 23px;
-    }
+  }
+  .navbar a {
+    padding: 14px 30px;
+    font-size: 23px;
+    display: all;
+  }
+  .navbar a.icon{
+    display: none;
+  }
 }
 
 @media (min-width:1200px) {
-    .col-offset-35 {
-      margin-left: 31%;
-    }
+  .navbar-offset {
+    margin-left: 31%;
+  }
 }
 
 @media (min-width:1400px) {
-    .col-offset-35 {
-      margin-left: 34%;
-    }
+  .navbar-offset {
+    margin-left: 34%;
+  }
 }
 
 @media (min-width:1600px) {
-    .col-offset-35 {
-      margin-left: 36.5%;
-    }
+  .navbar-offset {
+    margin-left: 36.5%;
+  }
 }
 

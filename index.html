@@ -6,14 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="PortfolioStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="PortfolioScripts.js"></script>
 </head>
 <body>
-    <div class="navbar">
-        <div class="col-offset-35">
+    <div class="navbar" id="NavBar">
+        <div class="navbar-offset">
             <a class="active" href=index.html>Home</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
             <a href="#about">About</a>
+            <a href="javascript::void(0);" class="icon" onclick="switchNavBar()">
+                <i class="fa fa-bars"></i>
+            </a>
         </div>
     </div>
     <div class="paragraph-body">
