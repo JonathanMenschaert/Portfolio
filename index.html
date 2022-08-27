@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="PortfolioScripts.js"></script>
 </head>
+
 <body>
     <div class="navbar" id="NavBar">
         <div class="navbar-offset">
@@ -22,10 +24,36 @@
         </div>
     </div>
     <div class="window-box">
-        <img class="img-container" src="img.png" alt="test image"/>
+        <div class="img-container">
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+
+                <div class="slide first">
+                    <img class="img-container" src="img.png" alt="test image" />
+                </div>
+                <div class="slide">
+                    <img class="img-container" src="img.png" alt="test image" />
+                </div>
+                <div class="slide">
+                    <img class="img-container" src="img.png" alt="test image" />
+                </div>
+                <div class="slide">
+                    <img class="img-container" src="img.png" alt="test image" />
+                </div>
+            </div>
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+        </div>
     </div>
     <div class="paragraph-body">
-        This is a test
+        Work in progress
     </div>
     <footer>
         <div class="window-box">
@@ -33,7 +61,7 @@
                 <div class="footer-body">
                     <hr>
                     <br>
-                    @2022 - Jonathan Menschaert
+                    &#169; 2022 - Jonathan Menschaert
                 </div>
             </div>
         </div>
