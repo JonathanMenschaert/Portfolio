@@ -14,7 +14,7 @@
 <body>
     <div class="navbar" id="NavBar">
         <div class="navbar-offset">
-            <a class="active" href=index.html>Home</a>
+            <a href=index.html>Home</a>
             <a href="page.html">Projects</a>
             <a href="#contact">Contact</a>
             <a href="#about">About</a>
@@ -23,25 +23,84 @@
             </a>
         </div>
     </div>
-    <div class="window-box center scale-30">
+    <div class="window-box center scaler">
+        <h1>
+            Recent Projects
+        </h1>
         <div class="slider">
             <div class="slides">
-                <input checked="checked" type="radio" name="radio-btn" id="radio1" onclick="adjustCounter(1)">
-                <input type="radio" name="radio-btn" id="radio2" onclick="adjustCounter(2)">
-                <input type="radio" name="radio-btn" id="radio3" onclick="adjustCounter(3)">
-                <input type="radio" name="radio-btn" id="radio4" onclick="adjustCounter(4)">
+                <input checked="checked" type="radio" name="radio-btn" id="radio1" onclick="adjustCounter(1, false)">
+                <input type="radio" name="radio-btn" id="radio2" onclick="adjustCounter(2, false)">
+                <input type="radio" name="radio-btn" id="radio3" onclick="adjustCounter(3, false)">
+                <input type="radio" name="radio-btn" id="radio4" onclick="adjustCounter(4, false)">
 
                 <div class="slide first">
-                    <img class="slide-container" src="img.png" alt="test image" />
+                    <div class="img-container">
+                        <img class="slide-container" src="img.png" alt="test image" />
+                    </div>                    
+                    <div class="text-box scaler">
+                        <h2>
+                            PLACEHOLDER
+                        </h2>
+                        <p class="text-body">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fringilla magna sed erat ullamcorper, vel maximus massa lobortis. 
+                            Sed eleifend odio tincidunt risus aliquam tempor. Quisque eget maximus lacus. Fusce quis sem faucibus, commodo eros ut, sagittis arcu. 
+                            Praesent fermentum tellus nec mauris commodo fermentum. Fusce turpis dolor, condimentum in pellentesque non, semper vitae turpis. 
+                            Nam sed varius nibh, accumsan dictum justo. Mauris at scelerisque turpis. In eget magna mattis, varius tortor quis, sagittis nisi. 
+                            Suspendisse congue molestie augue id sodales.
+                        </p>
+                    </div>
                 </div>
                 <div class="slide">
-                    <img class="slide-container" src="img.png" alt="test image" />
+                    <div class="img-container">
+                        <img class="slide-container" src="img.png" alt="test image" />
+                    </div>  
+                    <div class="text-box scaler">
+                        <h2>
+                            PLACEHOLDER
+                        </h2>
+                        <p class="text-body">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fringilla magna sed erat ullamcorper, vel maximus massa lobortis. 
+                            Sed eleifend odio tincidunt risus aliquam tempor. Quisque eget maximus lacus. Fusce quis sem faucibus, commodo eros ut, sagittis arcu. 
+                            Praesent fermentum tellus nec mauris commodo fermentum. Fusce turpis dolor, condimentum in pellentesque non, semper vitae turpis. 
+                            Nam sed varius nibh, accumsan dictum justo. Mauris at scelerisque turpis. In eget magna mattis, varius tortor quis, sagittis nisi. 
+                            Suspendisse congue molestie augue id sodales.
+                        </p>
+                    </div>
                 </div>
                 <div class="slide">
-                    <img class="slide-container" src="img.png" alt="test image" />
+                    <div class="img-container">
+                        <img class="slide-container" src="img.png" alt="test image" />
+                    </div>  
+                    <div class="text-box scaler">
+                        <h2>
+                            PLACEHOLDER
+                        </h2>
+                        <p class="text-body">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fringilla magna sed erat ullamcorper, vel maximus massa lobortis. 
+                            Sed eleifend odio tincidunt risus aliquam tempor. Quisque eget maximus lacus. Fusce quis sem faucibus, commodo eros ut, sagittis arcu. 
+                            Praesent fermentum tellus nec mauris commodo fermentum. Fusce turpis dolor, condimentum in pellentesque non, semper vitae turpis. 
+                            Nam sed varius nibh, accumsan dictum justo. Mauris at scelerisque turpis. In eget magna mattis, varius tortor quis, sagittis nisi. 
+                            Suspendisse congue molestie augue id sodales.
+                        </p>
+                    </div>
                 </div>
                 <div class="slide">
-                    <img class="slide-container" src="img.png" alt="test image" />
+                    <div class="img-container">
+                        <img class="slide-container" src="img.png" alt="test image" />
+                    </div>  
+                    <div class="text-box scaler">
+                        <h2>
+                            PLACEHOLDER
+                        </h2>
+                        <p class="text-body">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fringilla magna sed erat ullamcorper, vel maximus massa lobortis. 
+                            Sed eleifend odio tincidunt risus aliquam tempor. Quisque eget maximus lacus. Fusce quis sem faucibus, commodo eros ut, sagittis arcu. 
+                            Praesent fermentum tellus nec mauris commodo fermentum. Fusce turpis dolor, condimentum in pellentesque non, semper vitae turpis. 
+                            Nam sed varius nibh, accumsan dictum justo. Mauris at scelerisque turpis. In eget magna mattis, varius tortor quis, sagittis nisi. 
+                            Suspendisse congue molestie augue id sodales.
+                        </p>
+                    </div>
                 </div>                                          
             </div>
             <div class="navigation-manual">
@@ -50,9 +109,10 @@
                 <label for="radio3" id="radionav3" class="manual-btn"></label>
                 <label for="radio4" id="radionav4" class="manual-btn"></label>
             </div>
+            <hr class="scale-50">
         </div>
     </div>
-    <div class="paragraph-body">
+    <div class="text-body">
         Work in progress
     </div>
     <footer>
