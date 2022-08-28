@@ -23,32 +23,32 @@
             </a>
         </div>
     </div>
-    <div class="window-box">
-        <div class="img-container">
+    <div class="window-box center scale-30">
+        <div class="slider">
             <div class="slides">
-                <input type="radio" name="radio-btn" id="radio1">
-                <input type="radio" name="radio-btn" id="radio2">
-                <input type="radio" name="radio-btn" id="radio3">
-                <input type="radio" name="radio-btn" id="radio4">
+                <input checked="checked" type="radio" name="radio-btn" id="radio1" onclick="adjustCounter(1)">
+                <input type="radio" name="radio-btn" id="radio2" onclick="adjustCounter(2)">
+                <input type="radio" name="radio-btn" id="radio3" onclick="adjustCounter(3)">
+                <input type="radio" name="radio-btn" id="radio4" onclick="adjustCounter(4)">
 
                 <div class="slide first">
-                    <img class="img-container" src="img.png" alt="test image" />
+                    <img class="slide-container" src="img.png" alt="test image" />
                 </div>
                 <div class="slide">
-                    <img class="img-container" src="img.png" alt="test image" />
+                    <img class="slide-container" src="img.png" alt="test image" />
                 </div>
                 <div class="slide">
-                    <img class="img-container" src="img.png" alt="test image" />
+                    <img class="slide-container" src="img.png" alt="test image" />
                 </div>
                 <div class="slide">
-                    <img class="img-container" src="img.png" alt="test image" />
-                </div>
+                    <img class="slide-container" src="img.png" alt="test image" />
+                </div>                                          
             </div>
             <div class="navigation-manual">
-                <label for="radio1" class="manual-btn"></label>
-                <label for="radio2" class="manual-btn"></label>
-                <label for="radio3" class="manual-btn"></label>
-                <label for="radio4" class="manual-btn"></label>
+                <label for="radio1" id="radionav1" class="manual-btn manual-btn-selected" ></label>
+                <label for="radio2" id="radionav2" class="manual-btn"></label>
+                <label for="radio3" id="radionav3" class="manual-btn"></label>
+                <label for="radio4" id="radionav4" class="manual-btn"></label>
             </div>
         </div>
     </div>

@@ -15,7 +15,7 @@ hr {
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0px 5px 4px #2D2D2D, 0px -2px 4px #2D2D2D;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 }
   
   /* Style the links inside the navigation bar */
@@ -46,6 +46,25 @@ hr {
     height: auto;
   }
 
+  .center {
+    justify-content: center;
+  }
+
+  .scale-50{
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+
+  .scale-40{
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  .scale-30{
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
   .window-box {
     background-color: #1E1E1E;
     overflow: hidden;
@@ -72,7 +91,7 @@ hr {
     text-align:center;
   }
 
-  .img-container {
+  .slider, .slide-container {
     margin: 0;
     padding: 0;
     justify-content: center;
@@ -135,7 +154,10 @@ hr {
   #radio4:checked ~ .first {
     margin-left: -75%;
   }
-  
+
+  .manual-btn-selected {
+    background: #A27B5C;
+  }  
 
 @media (max-width:999px) {
   .navbar-offset {
