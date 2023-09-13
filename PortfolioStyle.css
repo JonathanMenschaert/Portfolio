@@ -1,6 +1,15 @@
 body {
     background-color:#333333;
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
+
+footer {
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
 
 hr {
   color: #A27B5C;
@@ -18,7 +27,7 @@ h1 {
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 20px;
   text-align: center;
   color: #DCD7C9;
   text-decoration: underline;
@@ -62,6 +71,29 @@ h2 {
 
   .entry-box {
     background-color: #DCD7C9;
+    width: 440px;
+    height: 350px;
+    margin: 2.5% ;
+    overflow: hidden;
+    float: left;
+    border-radius: 15px;
+    border-color: #DCD7C9;
+    border-width: 3px;
+    border-style: solid;
+  }
+
+  .main-window a:hover{
+    background-color: #A27B5C;
+    border-color: #A27B5C;
+  }
+
+  .entry-box-image {
+    width: 100%;    
+  }
+
+  .entry-box-divider {
+    height: 60%;
+    overflow: hidden;
   }
 
   .img-container {
@@ -84,6 +116,7 @@ h2 {
     text-align:center;
   }
 
+ 
   .footer-body{
     margin-left: 30%;
     margin-right: 30%;
@@ -119,8 +152,6 @@ h2 {
   .footer-body{
     margin-left: 15%;
     margin-right: 15%;
-    margin-top: 25px;
-    margin-bottom: 50px;
     color: #A27B5C;
     text-align:center;
   }
@@ -161,10 +192,6 @@ h2 {
     text-align:center;
   }
 
-  .text-box {
-    font-size: 16px;
-  }
-
   .scaler {
     margin-left: 10%;
     margin-right: 10%;
@@ -193,9 +220,13 @@ h2 {
     margin-left: 36.5%;
   }
 
-  .main-offset {
-    margin-left: 25%;
-    margin-right: 25%;
+  .main-window {
+    margin-left: 5%;
+    margin-right: 5%;
+    overflow: hidden;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
