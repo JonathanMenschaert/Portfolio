@@ -1,5 +1,12 @@
+:root {
+  --bgcolor: #272829;
+  --primcolor: #61677A; 
+  --seccolor: #D8D9DA;
+  --textcolor: #FFF6E0;
+}
+
 body {
-    background-color:#272829;
+    background-color:var(--bgcolor);
     display:flex;
     flex-direction: column;
     min-height: 100vh;
@@ -11,14 +18,14 @@ footer {
 }
 
 hr {
-  background: #FFF6E0;
+  background: var(--textcolor);
   border-width: 0px;
   height: 1px;
 }
 
 /* Add a dark background color to the top navigation */
 .navbar {
-    background-color: #61677A;
+    background-color: var(--primcolor);
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0px 5px 4px #2D2D2D, 0px -2px 4px #2D2D2D;
@@ -28,7 +35,7 @@ hr {
   /* Style the links inside the navigation bar */
 .navbar a {
     float: left;
-    color: #FFF6E0;
+    color: var(--textcolor);
     text-align: center;
     padding: 14px 30px;
     text-decoration: none;
@@ -38,12 +45,12 @@ hr {
   
   /* Change the color of links on hover */
   .navbar a:hover {
-    color: #D8D9DA;
+    color: var(--seccolor);
     text-decoration: underline
   }
 
   .window-box {
-    background-color: #61677A;
+    background-color: var(--primcolor);
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0px 5px 4px #2D2D2D, 0px -2px 4px #2D2D2D;
@@ -52,27 +59,27 @@ hr {
   }
 
   .entry-box {
-    background-color: #61677A;
+    background-color: var(--primcolor);
     width: 440px;
     height: 350px;
     margin: 2.5% ;
     overflow: hidden;
     float: left;
     border-radius: 15px;
-    border-color: #61677A;
+    border-color: var(--primcolor);
     border-width: 3px;
     border-style: solid;
   }
 
   .main-window a:hover{
-    background-color: #D8D9DA;
-    border-color: #D8D9DA;
-    color: #61677A;
+    background-color: var(--seccolor);;
+    border-color: var(--seccolor);;
+    color: --primcolor;
   }
 
   .main-window a{
     text-decoration: none;
-    color: #FFF6E0;
+    color: var(--textcolor);
   }
 
 
@@ -115,7 +122,7 @@ hr {
   }
 
   .text-body {
-    color: #DCD7C9;
+    color: var(--seccolor);
     text-align:center;
   }
 
@@ -125,7 +132,7 @@ hr {
     margin-right: 30%;
     margin-top: 25px;
     margin-bottom: 50px;
-    color: #FFF6E0;
+    color: var(--textcolor);
     text-align:center;
     font-family: Arial;
   }
