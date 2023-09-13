@@ -1,4 +1,5 @@
-function switchNavBar() {
+function switchNavBar() 
+{
     var x = document.getElementById("NavBar");
     if (x.className == "navbar") {
         x.className += " expand";
@@ -8,11 +9,17 @@ function switchNavBar() {
     }
 }
 
+function getCurrentYear()
+{
+
+}
+
 var counter = 1;
 var scroll = true;
 var maxImages = 4;
 
-function adjustCounter(newCounter) {
+function adjustCounter(newCounter) 
+{
     if (newCounter > maxImages) {
         newCounter = 1;
     }
@@ -22,12 +29,14 @@ function adjustCounter(newCounter) {
     document.getElementById("radio" + counter).checked = "checked";
 }
 
-function adjustManual(newCounter) {   
+function adjustManual(newCounter) 
+{   
     adjustCounter(newCounter);    
     scroll = false;    
 }
 
-setInterval(function () {
+setInterval(function () 
+{
     if (scroll) {
         adjustCounter(counter + 1);
     }

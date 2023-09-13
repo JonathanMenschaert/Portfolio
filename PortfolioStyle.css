@@ -51,40 +51,6 @@ h2 {
     text-decoration: underline
   }
 
-  .expand {
-    width: 100%;
-    height: auto;
-  }
-
-  .center {
-    justify-content: center;
-  }
-
-  .scale-50{
-    margin-left: 25%;
-    margin-right: 25%;
-  }
-
-  .scale-40{
-    margin-left: 20%;
-    margin-right: 20%;
-  }
-
-  .scale-30{
-    margin-left: 15%;
-    margin-right: 15%;
-  }
-
-  .scaler {
-    margin-left: 15%;
-    margin-right: 15%;
-  }
-
-  .window-box .scaler {
-    margin-left: 15%;
-    margin-right: 15%;
-  }
-
   .window-box {
     background-color: #1E1E1E;
     overflow: hidden;
@@ -92,6 +58,10 @@ h2 {
     box-shadow: 0px 5px 4px #2D2D2D, 0px -2px 4px #2D2D2D;
     position: relative;
     font-family: Arial;
+  }
+
+  .entry-box {
+    background-color: #DCD7C9;
   }
 
   .img-container {
@@ -122,74 +92,6 @@ h2 {
     color: #A27B5C;
     text-align:center;
   }
-
-  .slider, .slide-container {
-    margin: 0;
-    padding: 0;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    width: 100%
-  }
-
-  .slides {   
-    width: 400%;
-    display: flex;
-  }
-
-  .slides input{
-    display: none;
-  }
-
-  .slide {
-    transition: 1.5s;
-    width: 25%
-  }
-
-  .navigation-manual {
-    position: absolute;
-    display: flex;
-    margin-top:-40px;
-    width: 100%;
-    justify-content: center;
-  }
-
-  .manual-btn {
-    border: 2px solid #A27B5C;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-    
-  }
-
-  .manual-btn:not(:last-child) {
-    margin-right: 2%;
-  }
-
-  .manual-btn:hover {
-    background: #A27B5C;
-  }
-
-  #radio1:checked ~ .first {
-    margin-left: 0%;
-  }
-
-  #radio2:checked ~ .first {
-    margin-left: -25%;
-  }
-
-  #radio3:checked ~ .first {
-    margin-left: -50%;
-  }
-
-  #radio4:checked ~ .first {
-    margin-left: -75%;
-  }
-
-  .manual-btn-selected {
-    background: #A27B5C;
-  }  
 
 @media (max-width:999px) {
   .navbar-offset {
@@ -289,6 +191,11 @@ h2 {
 @media (min-width:1600px) {
   .navbar-offset {
     margin-left: 36.5%;
+  }
+
+  .main-offset {
+    margin-left: 25%;
+    margin-right: 25%;
   }
 }
 
