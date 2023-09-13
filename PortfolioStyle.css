@@ -52,6 +52,7 @@ h2 {
     text-decoration: none;
     font-size: 26px;
     font-family: Arial;
+    
 }
   
   /* Change the color of links on hover */
@@ -127,9 +128,6 @@ h2 {
   }
 
 @media (max-width:999px) {
-  .navbar-offset {
-    margin-left: 0%;
-  }
 
   .navbar a:not(:first-child) {
     display: none;      
@@ -160,22 +158,15 @@ h2 {
     font-size: 14px;
   }
 
-  .window-box .scaler {
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-
-  .scaler {
-    margin-left: 0%;
-    margin-right: 0%;
-  }
-
 }
 
 @media (min-width:1000px) {
-  .navbar-offset {
-      margin-left: 28%;
+
+  .navbar {
+    justify-content: center;
+    display: flex;
   }
+
   .navbar a {
     display: all;
   }
@@ -192,34 +183,6 @@ h2 {
     text-align:center;
   }
 
-  .scaler {
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-}
-
-@media (min-width:1200px) {
-  .navbar-offset {
-    margin-left: 31%;
-  }
-}
-
-@media (min-width:1400px) {
-  .navbar-offset {
-    margin-left: 34%;
-  }
-
-  .scaler {
-    margin-left: 15%;
-    margin-right: 15%;
-  }
-}
-
-@media (min-width:1600px) {
-  .navbar-offset {
-    margin-left: 36.5%;
-  }
-
   .main-window {
     margin-left: 5%;
     margin-right: 5%;
@@ -229,4 +192,5 @@ h2 {
     flex-wrap: wrap;
   }
 }
+
 
