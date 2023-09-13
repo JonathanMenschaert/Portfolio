@@ -1,5 +1,5 @@
 body {
-    background-color:#352F44;
+    background-color:#272829;
     display:flex;
     flex-direction: column;
     min-height: 100vh;
@@ -11,14 +11,14 @@ footer {
 }
 
 hr {
-  color: #FAF0E6;
+  background: #FFF6E0;
   border-width: 0px;
   height: 1px;
 }
 
 /* Add a dark background color to the top navigation */
 .navbar {
-    background-color: #5C5470;
+    background-color: #61677A;
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0px 5px 4px #2D2D2D, 0px -2px 4px #2D2D2D;
@@ -28,23 +28,22 @@ hr {
   /* Style the links inside the navigation bar */
 .navbar a {
     float: left;
-    color: #FAF0E6;
+    color: #FFF6E0;
     text-align: center;
     padding: 14px 30px;
     text-decoration: none;
     font-size: 26px;
-    font-family: Arial;
-    
+    font-family: Arial;    
 }
   
   /* Change the color of links on hover */
   .navbar a:hover {
-    color: #B9B4C7;
+    color: #D8D9DA;
     text-decoration: underline
   }
 
   .window-box {
-    background-color: #5C5470;
+    background-color: #61677A;
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0px 5px 4px #2D2D2D, 0px -2px 4px #2D2D2D;
@@ -53,40 +52,40 @@ hr {
   }
 
   .entry-box {
-    background-color: #5C5470;
+    background-color: #61677A;
     width: 440px;
     height: 350px;
     margin: 2.5% ;
     overflow: hidden;
     float: left;
     border-radius: 15px;
-    border-color: #5C5470;
+    border-color: #61677A;
     border-width: 3px;
     border-style: solid;
   }
 
   .main-window a:hover{
-    background-color: #B9B4C7;
-    border-color: #B9B4C7;
+    background-color: #D8D9DA;
+    border-color: #D8D9DA;
+    color: #61677A;
   }
 
   .main-window a{
     text-decoration: none;
+    color: #FFF6E0;
   }
 
 
   .entry-box h1 {
     font-size: 20px;
     text-align: center;
-    color: #DCD7C9;
     text-decoration: none;
     font-family: Arial;
   }
 
   .entry-box h2 {
     font-size: 15px;
-    text-align: center;
-    color: #DCD7C9;
+    text-align: center;    
     text-decoration: none;
     font-family: Arial;
   }
@@ -126,8 +125,9 @@ hr {
     margin-right: 30%;
     margin-top: 25px;
     margin-bottom: 50px;
-    color: #A27B5C;
+    color: #FFF6E0;
     text-align:center;
+    font-family: Arial;
   }
 
 @media (max-width:999px) {
@@ -150,12 +150,6 @@ hr {
     display: block;
     text-align: left;
   }
-  .footer-body{
-    margin-left: 15%;
-    margin-right: 15%;
-    color: #A27B5C;
-    text-align:center;
-  }
 
   .text-box {
     font-size: 14px;
@@ -175,15 +169,6 @@ hr {
   }
   .navbar a.icon{
     display: none;
-  }
-
-  .footer-body{
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-top: 25px;
-    margin-bottom: 50px;
-    color: #FAF0E6;
-    text-align:center;
   }
 
   .main-window {
