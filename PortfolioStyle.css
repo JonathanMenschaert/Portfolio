@@ -1,5 +1,5 @@
 body {
-    background-color:#333333;
+    background-color:#352F44;
     display:flex;
     flex-direction: column;
     min-height: 100vh;
@@ -10,33 +10,15 @@ footer {
     margin-bottom: 10px;
 }
 
-
 hr {
-  color: #A27B5C;
-  background-color: #A27B5C;
+  color: #FAF0E6;
   border-width: 0px;
   height: 1px;
 }
 
-h1 {
-  font-size: 40px;
-  text-align: center;
-  color: #A27B5C;
-  text-decoration: underline;
-  font-family: Arial;
-}
-
-h2 {
-  font-size: 20px;
-  text-align: center;
-  color: #DCD7C9;
-  text-decoration: underline;
-  font-family: Arial;
-}
-
 /* Add a dark background color to the top navigation */
 .navbar {
-    background-color: #141414;
+    background-color: #5C5470;
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0px 5px 4px #2D2D2D, 0px -2px 4px #2D2D2D;
@@ -46,7 +28,7 @@ h2 {
   /* Style the links inside the navigation bar */
 .navbar a {
     float: left;
-    color: #A27B5C;
+    color: #FAF0E6;
     text-align: center;
     padding: 14px 30px;
     text-decoration: none;
@@ -57,12 +39,12 @@ h2 {
   
   /* Change the color of links on hover */
   .navbar a:hover {
-    color: #DCD7C9;
+    color: #B9B4C7;
     text-decoration: underline
   }
 
   .window-box {
-    background-color: #1E1E1E;
+    background-color: #5C5470;
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0px 5px 4px #2D2D2D, 0px -2px 4px #2D2D2D;
@@ -71,21 +53,42 @@ h2 {
   }
 
   .entry-box {
-    background-color: #DCD7C9;
+    background-color: #5C5470;
     width: 440px;
     height: 350px;
     margin: 2.5% ;
     overflow: hidden;
     float: left;
     border-radius: 15px;
-    border-color: #DCD7C9;
+    border-color: #5C5470;
     border-width: 3px;
     border-style: solid;
   }
 
   .main-window a:hover{
-    background-color: #A27B5C;
-    border-color: #A27B5C;
+    background-color: #B9B4C7;
+    border-color: #B9B4C7;
+  }
+
+  .main-window a{
+    text-decoration: none;
+  }
+
+
+  .entry-box h1 {
+    font-size: 20px;
+    text-align: center;
+    color: #DCD7C9;
+    text-decoration: none;
+    font-family: Arial;
+  }
+
+  .entry-box h2 {
+    font-size: 15px;
+    text-align: center;
+    color: #DCD7C9;
+    text-decoration: none;
+    font-family: Arial;
   }
 
   .entry-box-image {
@@ -179,7 +182,7 @@ h2 {
     margin-right: 25%;
     margin-top: 25px;
     margin-bottom: 50px;
-    color: #A27B5C;
+    color: #FAF0E6;
     text-align:center;
   }
 
