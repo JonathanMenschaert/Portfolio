@@ -62,13 +62,22 @@ hr {
     background-color: var(--primcolor);
     width: 440px;
     height: 350px;
-    margin: 2.5% ;
+    margin: 5px ;
     overflow: hidden;
     float: left;
     border-radius: 15px;
     border-color: var(--primcolor);
     border-width: 3px;
     border-style: solid;
+  }
+
+  .main-window {
+    margin-left: 5%;
+    margin-right: 5%;
+    overflow: hidden;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .main-window a:hover{
@@ -98,7 +107,7 @@ hr {
   }
 
   .entry-box-image {
-    width: 100%;    
+    width: 100%;   
   }
 
   .entry-box-divider {
@@ -176,15 +185,6 @@ hr {
   }
   .navbar a.icon{
     display: none;
-  }
-
-  .main-window {
-    margin-left: 5%;
-    margin-right: 5%;
-    overflow: hidden;
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
   }
 }
 
