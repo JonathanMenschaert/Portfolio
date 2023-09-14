@@ -83,7 +83,7 @@ hr {
   .main-window a:hover{
     background-color: var(--seccolor);;
     border-color: var(--seccolor);;
-    color: --primcolor;
+    color: var(--primcolor);
   }
 
   .main-window a{
@@ -139,8 +139,8 @@ hr {
   .footer-body{
     margin-left: 30%;
     margin-right: 30%;
-    margin-top: 25px;
-    margin-bottom: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     color: var(--textcolor);
     text-align:center;
     font-family: Arial;
