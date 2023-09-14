@@ -127,7 +127,19 @@ hr {
   }
 
   .text-box {
-    margin-bottom: 12%;
+    font-size: 25px;
+    text-align: center;
+    text-decoration: none;
+    font-family: Arial;
+    color: var(--primcolor);
+    align-items: center;
+    display: flex;
+    height: 100%;
+  }
+
+  .text-box a:hover {
+    color: var(--primcolor);
+    background-color: transparent;
   }
 
   .text-body {
@@ -166,11 +178,6 @@ hr {
     display: block;
     text-align: left;
   }
-
-  .text-box {
-    font-size: 14px;
-  }
-
 }
 
 @media (min-width:1000px) {
