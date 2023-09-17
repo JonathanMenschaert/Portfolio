@@ -15,10 +15,12 @@ body {
 footer {
     margin-top: auto;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 hr {
-  background: var(--textcolor);
+  background: var(--primcolor);
   border-width: 0px;
   height: 1px;
 }
@@ -47,15 +49,6 @@ hr {
   .navbar a:hover {
     color: var(--seccolor);
     text-decoration: underline
-  }
-
-  .window-box {
-    background-color: var(--primcolor);
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0px 5px 4px #2D2D2D, 0px -2px 4px #2D2D2D;
-    position: relative;
-    font-family: Arial;
   }
 
   .entry-box {
@@ -122,10 +115,6 @@ hr {
     margin-right: 5%;
   }
 
-  .window-box-body {
-    margin: 20px;
-  }
-
   .text-box {
     font-size: 25px;
     text-align: center;
@@ -149,13 +138,13 @@ hr {
 
  
   .footer-body{
-    margin-left: 30%;
-    margin-right: 30%;
+    width: 50%;
     margin-top: 20px;
     margin-bottom: 20px;
-    color: var(--textcolor);
-    text-align:center;
+    color: var(--primcolor);
+    text-align: center;
     font-family: Arial;
+    justify-content: center;    
   }
 
 @media (max-width:999px) {
