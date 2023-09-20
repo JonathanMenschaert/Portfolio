@@ -19,8 +19,81 @@
         <a href="javascript::void(0);" class="icon" onclick="switchNavBar()">
             <i class="fa fa-bars"></i>
         </a>        
-    </div>    
-    <footer>
+    </div> 
+    <div class="main-window">
+        <div class="text-box">
+            <p>
+                Hello! My name is Jonathan. I am a programmer interested in AI.
+                <br>
+                You can check out my favourite projects below!
+            </p>
+            <br><br>
+        </div>
+        <br>
+        <div class="window-box slider">
+            <div class="slides">                
+                <input checked="checked" type="radio" name="radio-btn" id="radio1" onclick="adjustManual(1)">
+                <input type="radio" name="radio-btn" id="radio2" onclick="adjustManual(2)">
+                <input type="radio" name="radio-btn" id="radio3" onclick="adjustManual(3)">
+                <input type="radio" name="radio-btn" id="radio4" onclick="adjustManual(4)">
+                <a class="slide first" href="#test">
+                    <div>
+                        <div class="img-container">
+                            <img class="slide-container" src="img.png" alt="test image" />
+                        </div>                    
+                        <div class="text-box">
+                            <h2>
+                                PLACEHOLDER1
+                            </h2>
+                        </div>
+                    </div>
+                </a>
+                <a class="slide" href="#test">
+                    <div>
+                        <div class="img-container">
+                            <img class="slide-container" src="img.png" alt="test image" />
+                        </div>                    
+                        <div class="text-box">
+                            <h2>
+                                PLACEHOLDER2
+                            </h2>
+                        </div>
+                    </div>
+                </a>
+                <a class="slide" href="#test">
+                    <div>
+                        <div class="img-container">
+                            <img class="slide-container" src="img.png" alt="test image" />
+                        </div>                    
+                        <div class="text-box">
+                            <h2>
+                                PLACEHOLDER3
+                            </h2>
+                        </div>
+                    </div>
+                </a>
+                <a class="slide" href="#test">
+                    <div>
+                        <div class="img-container">
+                            <img class="slide-container" src="img.png" alt="test image" />
+                        </div>                    
+                        <div class="text-box">
+                            <h2>
+                                PLACEHOLDER4
+                            </h2>
+                        </div>
+                    </div>
+                </a>                                   
+            </div>
+            <div class="navigation-manual">
+                <label for="radio1" id="radionav1" class="manual-btn manual-btn-selected" ></label>
+                <label for="radio2" id="radionav2" class="manual-btn"></label>
+                <label for="radio3" id="radionav3" class="manual-btn"></label>
+                <label for="radio4" id="radionav4" class="manual-btn"></label>
+            </div>
+        </div>  
+    </div> 
+    <footer>    
         <div class="footer-body">
             <hr>
             <br>

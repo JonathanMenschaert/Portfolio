@@ -34,10 +34,3 @@ function adjustManual(newCounter)
     adjustCounter(newCounter);    
     scroll = false;    
 }
-
-setInterval(function () 
-{
-    if (scroll) {
-        adjustCounter(counter + 1);
-    }
-}, 7000);

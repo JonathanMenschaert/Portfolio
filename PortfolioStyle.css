@@ -25,6 +25,71 @@ hr {
   height: 1px;
 }
 
+.slider, .slide-container {
+  justify-content: center;
+  overflow: hidden;
+  width: 100%
+}
+
+.slides {   
+  width: 400%;
+  display: flex;
+}
+
+.slides a:hover {
+  background-color: transparent;
+}
+
+.slides input{
+  display: none;
+}
+
+.slide {
+  width: 25%
+}
+
+.navigation-manual {
+  display:flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 0px;
+}
+
+.manual-btn {
+  border: 2px solid var(--textcolor);
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 2%;
+}
+
+.manual-btn:hover {
+  background: var(--primcolor);
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0%;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -25%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -50%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -75%;
+}
+
+.manual-btn-selected {
+  background: var(--primcolor);
+}  
+
 /* Add a dark background color to the top navigation */
 .navbar {
     background-color: var(--primcolor);
@@ -64,6 +129,33 @@ hr {
     border-style: solid;
   }
 
+  .window-box {
+    background-color: var(--primcolor);
+    width: 800px;
+    height: 525px;
+    margin: 5px ;
+    overflow: hidden;
+    float: left;
+    border-radius: 15px;
+    border-color: var(--primcolor);
+    border-width: 3px;
+    border-style: solid;
+  }
+
+  .window-box h1 {
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-family: Arial;
+  }
+
+  .window-box h2 {
+    font-size: 15px;
+    text-align: center;    
+    text-decoration: none;
+    font-family: Arial;
+  }
+
   .main-window {
     margin-left: 5%;
     margin-right: 5%;
@@ -74,17 +166,19 @@ hr {
   }
 
   .main-window a:hover{
-    background-color: var(--seccolor);;
+    background-color: var(--seccolor);
     border-color: var(--seccolor);;
     color: var(--primcolor);
   }
 
   .main-window a{
     text-decoration: none;
-    color: var(--textcolor);
+    color: var(--seccolor);
   }
 
-
+  .window-box a:hover{
+    background-color: transparent;
+  }
   .entry-box h1 {
     font-size: 20px;
     text-align: center;
@@ -109,31 +203,28 @@ hr {
   }
 
   .img-container {
-    border-radius: 15px;
     overflow: hidden;
-    margin-left: 5%;
-    margin-right: 5%;
+    height: 60%;
   }
 
   .text-box {
-    font-size: 25px;
+    font-size: 15px;
     text-align: center;
     text-decoration: none;
     font-family: Arial;
-    color: var(--primcolor);
-    align-items: center;
-    display: flex;
-    height: 100%;
+    color: var(--seccolor);
+    width: 100%;
   }
 
-  .text-box a:hover {
+  .text-box a:hover{
     color: var(--primcolor);
-    background-color: transparent;
+    background-color: transparent;    
   }
 
   .text-body {
     color: var(--seccolor);
     text-align:center;
+    
   }
 
  
