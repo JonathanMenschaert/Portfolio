@@ -56,7 +56,7 @@ hr {
 }
 
 .manual-btn {
-  border: 2px solid var(--textcolor);
+  border: 2px solid var(--seccolor);
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
@@ -67,7 +67,7 @@ hr {
 }
 
 .manual-btn:hover {
-  background: var(--primcolor);
+  background: var(--seccolor);
 }
 
 #radio1:checked ~ .first {
@@ -87,7 +87,7 @@ hr {
 }
 
 .manual-btn-selected {
-  background: var(--primcolor);
+  background: var(--seccolor);
 }  
 
 /* Add a dark background color to the top navigation */
