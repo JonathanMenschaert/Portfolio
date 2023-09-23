@@ -220,8 +220,14 @@ hr {
     font-family: Arial;
     color: var(--seccolor);
     width: 100%;
-    display: flex;
+    
+  }
+
+  .content-box-images {
+    width: 100%;
     justify-content: center;
+    display:flex;
+    flex-wrap: wrap;
   }
 
   .content-box a:hover{
