@@ -156,6 +156,12 @@ hr {
     font-family: Arial;
   }
 
+  .icon-box {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+  }
+
   .main-window {
     margin-left: 5%;
     margin-right: 5%;
@@ -207,18 +213,21 @@ hr {
     height: 60%;
   }
 
-  .text-box {
+  .content-box {
     font-size: 15px;
     text-align: center;
     text-decoration: none;
     font-family: Arial;
     color: var(--seccolor);
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
-  .text-box a:hover{
+  .content-box a:hover{
     color: var(--primcolor);
-    background-color: transparent;    
+    background-color: var(--seccolor);
+    border-color: var(--seccolor);   
   }
 
   .text-body {
