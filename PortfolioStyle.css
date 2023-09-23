@@ -25,6 +25,8 @@ hr {
   height: 1px;
 }
 
+
+
 .slider, .slide-container {
   justify-content: center;
   overflow: hidden;
@@ -237,10 +239,16 @@ hr {
     flex-wrap: wrap;
   }
 
-  .content-box p {
-    font-size: 22px;    
+  .content-box h1{
+    font-size: 25px;
+  }
+
+  .content-box h2 {
+    font-size: 18px;    
 
   }
+
+ 
 
   .content-box hr {
     width: 20%;
