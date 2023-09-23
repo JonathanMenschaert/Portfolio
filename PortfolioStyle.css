@@ -230,6 +230,11 @@ hr {
     flex-wrap: wrap;
   }
 
+  .content-box p {
+    font-size: 22px;    
+
+  }
+
   .content-box a:hover{
     color: var(--primcolor);
     background-color: var(--seccolor);
