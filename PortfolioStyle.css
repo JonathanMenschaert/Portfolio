@@ -162,6 +162,13 @@ hr {
     border-radius: 40px;
   }
 
+  .icon-scaler
+  {
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+  }
+
   .main-window {
     margin-left: 5%;
     margin-right: 5%;
@@ -233,6 +240,10 @@ hr {
   .content-box p {
     font-size: 22px;    
 
+  }
+
+  .content-box hr {
+    width: 20%;
   }
 
   .content-box a:hover{
