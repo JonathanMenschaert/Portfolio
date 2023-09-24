@@ -129,6 +129,7 @@ hr {
     border-color: var(--primcolor);
     border-width: 3px;
     border-style: solid;
+    position: relative;
   }
 
   .window-box {
@@ -210,11 +211,21 @@ hr {
 
   .entry-box-image {
     width: 100%;   
+    position:relative;
   }
 
   .entry-box-divider {
     height: 60%;
     overflow: hidden;
+  }
+
+  .tag {
+    background-color: var(--seccolor);
+    width: 50px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 
   .img-container {
