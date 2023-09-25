@@ -27,8 +27,13 @@ hr {
 
 
 
-.slider, .slide-container {
+.slider {
   justify-content: center;
+  overflow: hidden;
+  width: 100%
+}
+
+.slide-container{
   overflow: hidden;
   width: 100%
 }
@@ -51,12 +56,18 @@ hr {
   width: 25%
 }
 
+.highlight-title {
+  position: absolute;
+  bottom: 50px;
+}
+
 .navigation-manual {
   display:flex;
   width: 100%;
   justify-content: center;
   margin-bottom: 0px;
   position: absolute;
+  bottom: 20px;
 }
 
 .manual-btn {
@@ -137,7 +148,7 @@ hr {
   .window-box {
     background-color: var(--primcolor);
     width: 800px;
-    height: 800px;
+    height: 525px;
     margin: 5px ;
     overflow: hidden;
     float: left;
