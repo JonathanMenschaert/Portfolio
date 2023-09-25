@@ -219,13 +219,31 @@ hr {
     overflow: hidden;
   }
 
-  .tag {
-    background-color: var(--seccolor);
-    width: 50px;
-    height: 20px;
+  .tag-container {
     position: absolute;
     top: 0;
     right: 0;
+  }
+
+  .tag {
+    background-color: var(--seccolor);
+    margin: 5px;
+    width: 60px;
+    height: 22px;
+    border-radius: 5px;
+    border-width: 4px;
+    border-color: transparent;
+    color: var(--bgcolor);
+    display: flex;
+    align-items: center;
+    justify-content:center;
+  }
+
+  .tag h1 {
+    
+    
+    font-size: 12px;
+    
   }
 
   .img-container {
