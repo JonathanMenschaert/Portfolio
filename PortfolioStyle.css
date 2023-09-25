@@ -33,6 +33,7 @@ hr {
   width: 100%
 }
 
+
 .slides {   
   width: 400%;
   display: flex;
@@ -55,6 +56,7 @@ hr {
   width: 100%;
   justify-content: center;
   margin-bottom: 0px;
+  position: absolute;
 }
 
 .manual-btn {
@@ -122,7 +124,7 @@ hr {
     background-color: var(--primcolor);
     width: 440px;
     height: 350px;
-    margin: 5px ;
+    margin: 20px ;
     overflow: hidden;
     float: left;
     border-radius: 15px;
@@ -135,7 +137,7 @@ hr {
   .window-box {
     background-color: var(--primcolor);
     width: 800px;
-    height: 525px;
+    height: 800px;
     margin: 5px ;
     overflow: hidden;
     float: left;
@@ -143,6 +145,7 @@ hr {
     border-color: var(--primcolor);
     border-width: 3px;
     border-style: solid;
+    position:relative;
   }
 
   .window-box h1 {
@@ -215,7 +218,7 @@ hr {
   }
 
   .entry-box-divider {
-    height: 60%;
+    height: 65%;
     overflow: hidden;
   }
 
@@ -239,11 +242,8 @@ hr {
     justify-content:center;
   }
 
-  .tag h1 {
-    
-    
-    font-size: 12px;
-    
+  .tag h1 {   
+    font-size: 12px;    
   }
 
   .img-container {
@@ -276,8 +276,6 @@ hr {
     font-size: 18px;    
 
   }
-
- 
 
   .content-box hr {
     width: 20%;
