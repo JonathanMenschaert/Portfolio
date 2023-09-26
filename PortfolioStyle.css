@@ -173,7 +173,7 @@ hr {
     font-family: Arial;
   }
 
-  .icon-box {
+  .icon{
     width: 80px;
     height: 80px;
     border-radius: 40px;
@@ -193,6 +193,7 @@ hr {
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
+    position: relative;
   }
 
   .main-window a:hover{
@@ -224,7 +225,7 @@ hr {
   }
 
   .entry-box-image {
-    width: 100%;   
+    max-width: 100%;   
     position:relative;
   }
 
@@ -262,14 +263,25 @@ hr {
     height: 60%;
   }
 
+  .project-title
+  {
+    margin-left: 10%;    
+  }
+
   .content-box {
     font-size: 15px;
     text-align: center;
     text-decoration: none;
     font-family: Arial;
     color: var(--seccolor);
+    width: 100%;    
+  }
+
+  .content-box-center{
+    justify-content: center;
+    display:flex;
+    flex-wrap: wrap;
     width: 100%;
-    
   }
 
   .content-box-images {
@@ -279,13 +291,31 @@ hr {
     flex-wrap: wrap;
   }
 
+  .content-box p {
+    font-size: 22px;
+    color: var(--primcolor);
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: left;
+  }
+
+  .content-box ul {
+    text-align: left;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .content-box li {
+    font-size: 22px;
+    color: var(--primcolor);
+  }
+
   .content-box h1{
-    font-size: 25px;
+    font-size: 40px;
   }
 
   .content-box h2 {
-    font-size: 18px;    
-
+    font-size: 30px;    
+    color: var(--primcolor);
   }
 
   .content-box hr {
@@ -296,6 +326,22 @@ hr {
     color: var(--primcolor);
     background-color: var(--seccolor);
     border-color: var(--seccolor);   
+  }
+
+  .div-center {
+    display: flex;
+    justify-content: center;
+    width:80%;
+    margin-bottom: 75px;
+    flex-wrap:wrap;
+  }
+
+  .div-small {
+    width:50%;
+  }
+
+  .div-large{
+    width:75%;
   }
 
   .text-body {
@@ -337,6 +383,18 @@ hr {
     display: block;
     text-align: left;
   }  
+
+  .div-small {
+    width:80%;
+  }
+
+  .div-large {
+    width:80%;
+  }
+
+  .icon-box {
+    position: relative;
+  }
 }
 
 @media (min-width:1000px) {
@@ -351,6 +409,12 @@ hr {
   }
   .navbar a.icon{
     display: none;
+  }
+
+  .icon-box {
+    position: absolute;
+    top: 20px;
+    right: 20px;
   }
 }
 

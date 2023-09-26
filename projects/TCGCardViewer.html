@@ -21,13 +21,103 @@
         </a>        
     </div>  
     <div class="main-window">
-        <div class="content-box">
-            <br><br><br><br>           
-            <p>
-                <h1>Project page under construction</h1><br>
-                
-            </p>   
-            <br><br>                  
+        <div class="content-box">  
+            <br><br>  
+            <h1>
+                TCG Pokemon Card Viewer
+            </h1>                    
+            <br>
+            <div class="content-box-center">
+                <a class="window-box icon icon-box" href="https://github.com/JonathanMenschaert/Pokemon-TCG-Card-Viewer" title="Redirect to Github Page of this project" target="_blank" rel="noopener noreferrer" >
+                    <img class="icon" src="../icons/github-mark.png"/>
+                </a>
+            </div>
+           
+            <br>
+            <h2>
+                Goal
+            </h2>
+            <div class="content-box-center">
+                <div class="div-center">
+                    <div class="div-large">
+                        <p>               
+                            Building a tool using C# and XAML using the MVVM pattern. 
+                            The tool should have online and offline mode. For the online functionality, an external API has to be used to get the data.
+                            The data for the offline functionality should be gathered via JSON files.
+                        </p>   
+                    </div>    
+                </div> 
+            </div>           
+            <h2>
+                Introduction
+            </h2> 
+            <div class="content-box-center">
+                <div class="div-center">
+                    <div class="div-large">
+                        <p>               
+                            Games often have dozens, if not hundreds of items the player can collect and use. In such a case it can be very useful to be able to view the item stats so the player knows if the item is worth collecting. Moreso, having a list of all the items and their stats currently in the game is also useful during development of said game. That is why I decided to use the Pokemon TCG API for this project, as it is a card game with thousands of cards. This means that the need for a central application to view the different cards available is very high for both the developer of the computer game and the player.                
+                        </p>   
+                    </div>    
+                </div>
+            </div>
+            <h2>
+                Overview Page
+            </h2>  
+            <div class="content-box-center">
+                <div class="div-center">
+                    <div class="div-small">
+                        <p>               
+                            The overview page gives you access to a search area where you can set the following search queries:
+                            
+                            <ul>
+                                <li>Card Type (e.g. Colorless)</li>
+                                <li>Card Subtype (e.g. Stage 1)</li>
+                                <li>Page Size</li>
+                                <li>Page Number</li>
+                                <li>Card Name (e.g. Charizard or Char*)</li>
+                            </ul>
+                            <br>
+                        </p>
+                        <p>
+                            The name field can contain the exact card name, but can also have a wildcard character (*). The wildcard character will match with any number of characters, and can be anywhere within the name. If you search for "C*", it will look for any card name starting with the letter 'C'.
+                        </p>                      
+                    </div>  
+                    
+                    <div class="div-small">
+                        <image class="entry-box-image" src="CardViewer/OverviewPage.png" alt="Overview Page" />                      
+                    </div>
+                </div>
+            </div>
+             
+            <h2>
+                Detail Page
+            </h2>  
+            <div class="content-box-center">
+                <div class="div-center">
+                    <div class="div-small">
+                        <p>               
+                            The detail page will give you more info on the card's stats, such as the classification. If the card has it, the attacks, abilities and rules will also be displayed. The card series logo is displayed under the card.
+                        </p>   
+                    </div> 
+                    <div class="div-small">
+                        <image class="entry-box-image" src="CardViewer/DetailPage.png" alt="Overview Page" />                      
+                    </div>     
+                </div>
+            </div> 
+            <h2>
+                Switching Repositories
+            </h2>  
+            <div class="content-box-center">
+                <div class="div-center">
+                    <div class="div-large">
+                        <p> 
+                            The tool contains a local mock-up repository in order to test out the features offline. Both the online and offline repository contain the same functionality.              
+                            You can easily switch between the repositories via the UI. Simply select the "Search" icon in the left sidebar to use the API repository and the "Collection" icon to use the local repository.
+                        </p>   
+                    </div>  
+                </div> 
+            </div>
+                        
         </div>
     </div>   
     <footer>
