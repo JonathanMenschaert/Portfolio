@@ -133,8 +133,8 @@ hr {
 
   .entry-box {
     background-color: var(--primcolor);
-    width: 440px;
-    height: 350px;
+    max-width: 440px;
+    max-height: 350px;
     margin: 20px ;
     overflow: hidden;
     float: left;
@@ -147,8 +147,8 @@ hr {
 
   .window-box {
     background-color: var(--primcolor);
-    width: 800px;
-    height: 525px;
+    max-width: 800px;
+    max-height: 525px;
     margin: 5px ;
     overflow: hidden;
     float: left;
@@ -315,6 +315,8 @@ hr {
     justify-content: center;    
   }
 
+
+
 @media (max-width:999px) {
 
   .navbar a:not(:first-child) {
@@ -334,7 +336,7 @@ hr {
     float: none;
     display: block;
     text-align: left;
-  }
+  }  
 }
 
 @media (min-width:1000px) {
