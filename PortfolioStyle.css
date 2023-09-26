@@ -350,6 +350,16 @@ hr {
     
   }
 
+  #Header {
+    text-align:center;
+    
+  }
+
+  #Description{
+    font-size: 18px;
+    color: var(--seccolor);
+  }
+
  
   .footer-body{
     width: 50%;
