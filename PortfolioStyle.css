@@ -179,6 +179,14 @@ hr {
     border-radius: 40px;
   }
 
+  .icon-box {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
   .icon-scaler
   {
     width: 120px;
@@ -401,10 +409,6 @@ hr {
   .div-large {
     width:80%;
   }
-
-  .icon-box {
-    position: relative;
-  }
 }
 
 @media (min-width:1000px) {
@@ -425,6 +429,7 @@ hr {
     position: absolute;
     top: 20px;
     right: 20px;
+    width: 100px;
   }
 }
 
