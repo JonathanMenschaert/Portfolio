@@ -61,6 +61,7 @@ hr {
   bottom: 50px;
 }
 
+
 .navigation-manual {
   display:flex;
   width: 100%;
@@ -335,6 +336,17 @@ hr {
     background-color: var(--seccolor);
     border-color: var(--seccolor);   
   }
+
+  
+.highlight-title h2 {
+  font-size: 22px;
+  color: var(--seccolor);
+}
+
+.header-outline {
+  -webkit-text-stroke-color: var(--primcolor); 
+  -webkit-text-stroke-width: 2px;
+}
 
   .div-center {
     display: flex;
