@@ -308,6 +308,12 @@ hr {
     text-align: left;
   }
 
+  .video-container {
+    max-width: 480;
+    max-height: 270;
+    margin: 20px;
+  }
+
   .content-box ul {
     text-align: left;
     margin-left: 5%;
@@ -319,7 +325,7 @@ hr {
   }
 
   .content-box h1{
-    font-size: 40px;
+    font-size: 45px;
   }
 
   .content-box h2 {
@@ -364,6 +370,9 @@ hr {
     width:75%;
   }
 
+  .max-height {
+    max-height: 300px;
+  }
   .text-body {
     color: var(--seccolor);
     text-align:center;
