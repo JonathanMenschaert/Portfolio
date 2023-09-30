@@ -41,8 +41,8 @@
                 <div class="div-center">
                     <div class="div-large">
                         <p>               
-                            Writing an application that can switch between CPU and GPU based rasterization and achieve the same lighting on a provided model.
-                            For the CPU, the several rasterization stages have to be written by hand in addition to the shaders themselves. 
+                            Writing an application that can seemlessly switch between CPU and GPU based rasterization and achieve the same lighting on a provided model.
+                            For the CPU, the several rasterization stages have to be written by hand in addition to the shader effects themselves. 
                             The GPU side has to be set up and the effects have to be written in HLSL.
                             
                         </p>   
@@ -50,15 +50,54 @@
                 </div> 
             </div>   
             <h2>
-                CPU Rasterization
+                Common Code
             </h2>
             <div class="content-box-center">
                 <div class="div-center">
                     <div class="div-large">
                         <p>               
-                            Revise
+                            Considering the switch between the two rasterization methods needs to be as seemlessly as possible, the code of both processors will need access to the current state of the other. 
+                            Or in other words, only the code that handles the rasterization needs to be seperated, the rest can be combined. The only variables each of the processors need access to are the meshes and the camera. 
+                            Those can easily be passed as referenced variables into the render function of the currently active processor, as it would be a waste of memory to store the same data twice. 
+                            I opted to make use of polymorphism to control the switch. The currently active processor's pointer is stored in a base class pointer, 
+                            which is then used to call the correct render function. 
                         </p>   
                     </div>    
+                </div> 
+            </div>
+            <h2>
+                CPU Rasterization
+            </h2>
+            <div class="content-box-center">
+                <div class="div-center">
+                    <div class="div-small">
+                        <p>               
+                            In the render function of the CPU, the mesh first passes through the Projection phase. 
+                            That is the phase where the 3D object is projected onto the 2D screen.
+                            <br><br>
+                            From there, the code loops over all triangles in the mesh and attempts to rasterize them. As an extra, this part is multithreaded to give an extra bit of performance on the CPU. However, as I will explain later, this brings it's own set of problems.
+                            
+                            This is only done if all 3 triangle coordinates are visible for the camera, but it is possible to solve this through a technique called frustrum culling. Unfortunately I did not have enough time to add this in a good way, so I decided to not implement it.
+
+                        </p>   
+                    </div>  
+                    <div class="div-small">
+                        <image class="entry-box-image" src="DualRasterizer/DualRasterizerCPU.png" alt="CPU Rasterizer" />                      
+                    </div> 
+                    <div class="div-full">
+                        <p>               
+                            There are a couple of checks to go through before we can go to the next stage. First of all, the culling mode needs to be checked, which can be back, front or none.                            
+                           
+                            Then the next one is the depth test, which checks if the pixel is not being obstructed by another one closer to the camera.
+                            Once the pixel passes both checks, it will move on to the pixelshader, which is the part of the code responsible to calculate the pixel color based on the effect that is applied on the mesh.
+                            <br><br>
+                            I wrote 2 effects, an opaque effect for vehicle itself and a transparancy effect for the flames coming out of exhaust of the vehicle. This is also where the multithreading issue lies; 
+                            Because the multithreaded code is executed in parallel, it creates race conditions, where the pixel's color can change based on what pixel is finished calculating first. This was especially jarring with the transparancy effect, 
+                            so I implemented some additional code to disable multithreading for that effect. It is also present on the opaque effect, but it is barely noticable, so I left that as is.
+                            <br><br>
+                            This continues till all triangles are looped over, at which point the next frame starts, or the processor switches over to the GPU.
+                        </p>   
+                    </div>  
                 </div> 
             </div>   
             <h2>
@@ -66,14 +105,54 @@
             </h2>
             <div class="content-box-center">
                 <div class="div-center">
+                    <div class="div-small">
+                        <p>               
+                            Luckily, it is completely unnecessary to rewrite the code that goes through all the different rasterization stages for the GPU, as it can perfectly handle that by itself. 
+                            It even handles the frustrum culling automatically.
+                            I only need to set up the code that communicates the necessary data, such as the mesh vertices and the camera matrices, to the GPU. 
+                            The matrices are set through global public variables in a .fx file, but to implement the data for the mesh vertices, I need to set up an input layout. 
+                            This tells the gpu how it can expect the data to be structured. The .fx file needs to have a struct defined with the same data layout, so the data can easily be fed into the code.   
+                            <br><br>
+                            Once the data is fed into the HLSL code, the only thing left to write is pixel shader code. This code should render exactly the same result as the CPU equivalent, 
+                            with the exception of some potential difference in rounding between the two processors.   
+                        
+                        </p>   
+                    </div>  
+                    <div class="div-small">
+                        <image class="entry-box-image" src="DualRasterizer/DualRasterizerGPU.png" alt="GPU Rasterizer" />                      
+                    </div>  
+                </div> 
+            </div>  
+            <h2>
+                Additional Options
+            </h2>
+            <div class="content-box-center">
+                <div class="div-center">
                     <div class="div-large">
                         <p>               
-                            
-                            Revise
+                            There are a few additional options to view the model in a somewhat different light. 
+                            For example, on the CPU only with F5, you can cycle through the diffuse-only, observed area, diffuse and combine shading mode.
+                            With F9, you can cycle through the different cullmodes.                        
                         </p>   
                     </div>    
                 </div> 
-            </div>          
+            </div> 
+            <h2>
+                Conclusion
+            </h2>
+            <div class="content-box-center">
+                <div class="div-center">
+                    <div class="div-large">
+                        <p>               
+                            While not immediately in the range of my interests, I did enjoy working on this project. 
+                            I often did not expect some very apparent lighting bugs to be the result of a small mistake in the code,
+                            which was at times frustrating to hunt down, but it was always satisfying to see it work correctly.   
+                            This project made it clear for me that the amount of optimizations needed to render games at at least 60fps is massive, 
+                            as simply taking away the multithreading for the fire effect on the CPU made my fps go down by a not so small amount.                    
+                        </p>   
+                    </div>    
+                </div> 
+            </div>         
         </div>
     </div>   
     <footer>
