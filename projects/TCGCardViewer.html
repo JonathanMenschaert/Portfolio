@@ -55,7 +55,8 @@
                 <div class="div-center">
                     <div class="div-large">
                         <p>               
-                            Games often have dozens, if not hundreds of items the player can collect and use. In such a case it can be very useful to be able to view the item stats so the player knows if the item is worth collecting. Moreso, having a list of all the items and their stats currently in the game is also useful during development of said game. That is why I decided to use the Pokemon TCG API for this project, as it is a card game with thousands of cards. This means that the need for a central application to view the different cards available is very high for both the developer of the computer game and the player.                
+                            Games often have dozens, if not hundreds of items the player can collect and use. In such a case it can be very useful to be able to view the item stats so the player knows if the item is worth collecting. Moreso, having a list of all the items and their stats currently in the game is also useful during development of said game.
+                            That is why I decided to use the Pokemon TCG API for this project, as it is a card game with thousands of cards. This means that the need for a central application to view the different cards available is very high for both the developer of the computer game and the player.                
                         </p>   
                     </div>    
                 </div>
@@ -96,7 +97,7 @@
                 <div class="div-center">
                     <div class="div-small">
                         <p>               
-                            The detail page will give you more info on the card's stats, such as the classification. If the card has it, the attacks, abilities and rules will also be displayed. The card series logo is displayed under the card.
+                            The detail page will give you more info on the card's stats, such as the classification. If the card has it, the attacks, abilities and rules will also be dynamically displayed. The card series logo is displayed under the card.
                         </p>   
                     </div> 
                     <div class="div-small">
@@ -117,7 +118,46 @@
                     </div>  
                 </div> 
             </div>
-                        
+            <h2>
+                Conclusion
+            </h2>  
+            <div class="content-box-center">
+                <div class="div-center">
+                    <div class="div-large">
+                        <p> 
+                            I had written a project in C# before, but this was my first time using XAML, which went quite well. 
+                            I would have liked to make the side buttons a bit more user-friendly, but I could not find a way to accomplish that in XAML without breaking the MVVM pattern.
+                            
+                            Designing the layout of the page was part of the assignment, but by far my least favourite part. I did enjoy figuring out how the API works and adding features based on that, and adding the same features afterwards in the offline repository.
+                            Unfortunately, some combinations of search parameters returned wrong or no data, so I had to make sure that the parameters you could select were always compatible with each other.
+
+                        </p>   
+                    </div>  
+                </div> 
+            </div>             
+            <h2>
+                Sources
+            </h2>  
+            <div class="content-box-center">
+                <div class="div-center">
+                    <div class="div-large">
+                        <p> 
+                            <ul>
+                                <li>
+                                    API main page: <a href="https://pokemontcg.io/" title="Redirect to spriters-resource" target="_blank" rel="noopener noreferrer" >
+                                        Pokemon TCG
+                                    </a>
+                                </li>
+                                <li>
+                                    API Documentation: <a href=" https://docs.pokemontcg.io/" title="Redirect to spriters-resource" target="_blank" rel="noopener noreferrer" >
+                                        Pokemon TCG Docs
+                                    </a>
+                                </li>
+                            </ul>
+                        </p>   
+                    </div>  
+                </div> 
+            </div>    
         </div>
     </div>   
     <footer>
