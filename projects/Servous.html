@@ -41,10 +41,94 @@
             <div class="content-box-center">
                 <div class="video-container">
                     <iframe width="480" height="270" src="https://www.youtube.com/embed/EgQ9Ff3QsWc" allowfullscreen></iframe>
-                </div>               
-                
-                
-            </div>                   
+                </div>                   
+            </div>
+            <h2>
+                Goal
+            </h2>
+            <div class="content-box-center">
+                <div class="div-center">
+                    <div class="div-large">
+                        <p>               
+                            Building a playable game that fits the theme of "Fragile" in about 2 days for a 
+                            <a href="https://itch.io/jam/unwrap-jam-2023" title="Redirect to Itch.io" target="_blank" rel="noopener noreferrer" >
+                                Game Jam
+                            </a> on Itch.io.
+                        </p>   
+                    </div>    
+                </div> 
+            </div> 
+            <h2>
+                Brainstorming
+            </h2>
+            <div class="content-box-center">
+                <div class="div-center">
+                    <div class="div-large">
+                        <p>               
+                            As soon as the theme "Fragile" was announced, we all got to work to finding an appropriate game idea.
+                            Fairly quickly, we were converging on the idea of a waiter having trouble delivering drinks without dropping them to customers.
+    
+                            After agreeing on the general concept, we had to come up with how the mechanics would work. We decided to let the player control the hand of the waiter and balance the drinks, 
+                            while the waiter walks to the correct table automatically. Though, because the waiter is nervous, the hand also moves around a bit on it's own. You start with one minute to deliver as many drinks as possible.
+                            If you drop a drink or let it fall over, it will break. You get 1 point for every drink you safely deliver to the customer and some additional time to allow for extended gameplay if you are doing well.
+    
+                            There were unfortunately also a few ideas that sounded cool, but did not make it in the final product due to a lack of time.
+                            We initially also had the idea to have customers walk around the property, and the player would be responsible to make the waiter stop in time to avoid bumping into them. 
+                            
+                            We also planned to have a daylight cycle, which would indicate a work day, and depending on how well you did up till that point, you would be allowed to start your next shift. 
+                            This was the original idea before we had to scrap it for the one minute timer.
+                        </p>   
+                    </div>    
+                </div> 
+            </div> 
+            <h2>
+                The Game
+            </h2>
+            <div class="content-box-center">
+                <div class="div-center">
+                    <div class="div-small">
+                        <p>               
+                           After agreeing on all of the mechanics, we got to work on the actual game. We divided up the tasks amongst ourselves. 
+                           First off, there was the level itself. Because we had no artists, we had to go with an 
+                           <a href="https://syntystore.com/products/polygon-city-pack" title="Redirect to spriters-resource" target="_blank" rel="noopener noreferrer" >
+                                asset pack
+                           </a> , so one of us was in charge of building the level with those assets.
+                           Then there was the actual coding, which could be seperated in a couple of parts: handling drinks, handling arm movement, menu system and movement.
+                        </p>   
+                    </div> 
+                    <div class="div-small">
+                        <image class="entry-box-image" src="Servous/ServousGameplay.png" alt="Servous Gameplay" />                      
+                    </div>
+                    <div class="div-full">
+                        <p>               
+                           I was in charge of the movement of the waiter. Since we decided the waiter would move around on his own, 
+                           I had to create a navmesh and an accompanying graph with location nodes to make sure it would take the path we expected it to.
+                           As a polishing step, the waiter turns to look at the table it is delivering drinks to, and will return back to the start if all drinks are dropped. Unfortunately, there is an edge case where the latter sometimes fails.
+                           <br><br>
+                           The drink handling involved making the drinks spawn on the tray at the bar entrance and handling the collision of the individual drinks once they are on the tray.
+                           <br><br>
+                           In order to make the bar feel a bit more alive, one member of our team looked into using Mixamo as a way to animate the customers. That way it looks they are having conversations while they are waiting for their drinks. 
+                           <br><br>
+                           Last, but not least, we needed music and sound effects to give to bring the player in the right mood. 
+                        </p>   
+                    </div>  
+                </div> 
+            </div>  
+            <h2>
+                Conclusion
+            </h2>
+            <div class="content-box-center">
+                <div class="div-center">
+                    <div class="div-large">
+                        <p>               
+                           Despite the fact that we had to scratch some things, I like how the game turned out. The game is slightly unfair at times due to the rng, but since there are no real stakes, it only adds to the chaos. 
+                           It was also first and foremost an interesting experience, working with 5 developers together on a game with very limited time. It is surprising how much you learn about working in a team and the difference with longterm projects, 
+                           such as making decisions quickly as to what is important, as opposed to carefully weighing your options.
+                           In the end, that is what game jams are about, having fun and trying to learn something from it, which we all definitely did.
+                        </p>   
+                    </div>    
+                </div>   
+            </div>                
         </div>
     </div>   
     <footer>
