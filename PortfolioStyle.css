@@ -381,7 +381,7 @@ hr {
 
   #Header {
     text-align:center;
-    
+    color: var(--seccolor);
   }
 
   #Description{
