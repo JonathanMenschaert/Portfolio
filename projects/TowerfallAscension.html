@@ -25,16 +25,133 @@
         <div class="content-box">
             <br><br>           
             <p>
-                <h1>Page under construction</h1><br>
-                
+                <h1>Towerfall Ascension</h1><br>                
             </p>  
             <div class="content-box-center">
                 <div class="icon-box">
-                    <a class="window-box icon" href="https://plorigon.itch.io/towertricksters" title="Redirect to Github Page of this project" target="_blank" rel="noopener noreferrer" >
+                    <a class="window-box icon" href="https://github.com/JonathanMenschaert/Towerfall-Ascension" title="Redirect to Github Page of this project" target="_blank" rel="noopener noreferrer" >
                         <img class="icon" src="../icons/github-mark.png"/>
                     </a>
                 </div>                
-            </div>                  
+            </div>  
+            <div class="content-box-center">
+                <div class="video-container">
+                    <iframe width="480" height="270" src="TowerfallAscension/Towerfall Ascension Gameplay.mp4" allowfullscreen></iframe>
+                </div>                  
+            </div>     
+            <h2>
+                Goal
+            </h2>
+            <div class="content-box-center">
+                <div class="div-center">
+                    <div class="div-large">
+                        <p>               
+                            Recreating a level of a 2D arcade game of my choice as closely as possible in a provided framework as an exam assignment.
+                            The only restriction is that all of the following components are present: Moving camera, Sprite animations, Gameobject interactions,
+                            enough mechanics from the game to implement, A hud and UI and lastly, Sound.
+                        </p>   
+                    </div>    
+                </div> 
+            </div>   
+            <h2>
+                Introduction
+            </h2>
+            <div class="content-box-center">
+                <div class="div-center">
+                    <div class="div-small">
+                        <p>               
+                            Before I landed on Towerfall Ascension as a game to make, I had some trouble making a choice, 
+                            as I don't usually play 2D games like the assignment required. I did not want to settle for an easy game because of this, 
+                            but I also had to make sure that I could find the sprites I would need for the game.
+                            After doing some digging, I eventually went with this game. It has most of the required components, except the moving camera, 
+                            as it is a static level. I would need to implement that myself in some way.
+                            <br><br>
+                            There is also the possibility to add some more optional components, such as an additional level and a particle system, 
+                            but those should only be implemented after the required parts.
+                        </p>   
+                    </div>  
+                    <div class="div-small">
+                        <image class="entry-box-image" src="TowerfallAscension/TowerfallAscensionTitle.png" alt="Title Screen" />                      
+                    </div>  
+                </div> 
+            </div>   
+            <h2>
+                The Game
+            </h2>
+            <div class="content-box-center">
+                <div class="div-center">
+                    <div class="div-small">
+                        <p>               
+                            After gathering the necessary sprites, I built the level and got the level collisions in order. 
+                            Camera was up next, and since the level I was going to make only has a static camera, I decided to add a zoom, which would mimic the effect of a moving one.
+                            <br><br>
+                            Later on, I realised the level selector map was too big to fit on the screen properly, so I also added the moving camera there, centered on the selector arrow.
+                            <br><br>                            
+                            Up next was the player character. Due to the amount of different player states present, 
+                            I had to rewrite and refactor the controller a few times to get it as clean as possible.
+                            The arrows the player fires are removed from the quiver and have to be picked up again to be used again.
+                        </p>   
+                    </div>  
+                    <div class="div-small">
+                        <image class="entry-box-image" src="TowerfallAscension/TowerfallAscensionMap.png" alt="Map Screen" />                      
+                    </div>  
+                    <div class="div-full">
+                        <p>               
+                            Once I got that working, I started on the enemies. Initially, I wanted to create a more advanced AI for both the ghost and the slime, 
+                            but that turned out to be out of scope for this project, so I went with a more rudimentary version. 
+                            <br><br>
+                            The slime always moves forwards, when it hits a wall, it turns around and then goes back to moving in the direction it's looking. The forward motion temporarily stops when it falls of a ledge.
+                            When the player gets near however, the slime will start chasing them until it loses sight.
+                            <br><br>
+                            For the ghost, I set up a few random points over the whole map, and connected them together in a graph system. The ghost moves randomly between those points until it sees the player, 
+                            at which point it will start chasing them, like the slime. The ghost has one additional perk; it can dodge an incoming arrow of the player if it can see it. After that the ghost becomes confused and cannot dodge for a while.
+                            <br><br>
+                            The game also provides a chest with powerups at the end of each level. The powerups I added were extra arrows and a shield, which can block one hit.
+                            <br><br>
+                            Once the other key features of the game were pretty much done, I created the UI, which includes a main menu, an options menu to change the sound volume and the level selector map, which I mentioned earlier.
+                            Afterwards, the only thing left to do was to add the music and sounds to the various game objects and menus.
+
+                            <br><br>
+                            As extras, I added in a particle system to have a fire effect on the torches, and the ability to load a level from a file, 
+                            including how many and which enemies are in each wave.
+                        </p>
+                    </div>
+                </div> 
+            </div> 
+            <h2>
+                Conclusion
+            </h2>
+            <div class="content-box-center">
+                <div class="div-center">
+                    <div class="div-large">
+                        <p>               
+                            So far, this assignment is one of my favourites. I really enjoyed working on this project, despite not being able to do everything I wanted to, 
+                            such as adding multiple levels, I am really happy with the end result and learned a lot during the development. 
+                            This project was written before learning about the game programming patterns, so there are a few areas in the code that would need to be rewritten 
+                            if I were to completely rewrite this project or start a similar project one day.
+                        </p>   
+                    </div>  
+                    
+                </div> 
+            </div>    
+            <h2>
+                Sources
+            </h2>
+            <div class="content-box-center">
+                <div class="div-center">
+                    <div class="div-large">
+                        <p>               
+                            Of course, I did not create any of the sprites or the music/sounds, nor do they belong to me, all belongs to Maddy Makes Games Inc.
+                            <br>
+                            I found the sprites on 
+                            <a href="https://www.spriters-resource.com/pc_computer/towerfallascension/" title="Redirect to spriters-resource" target="_blank" rel="noopener noreferrer" >
+                                Spriters-Resource
+                            </a>, and the sounds are extracted from the game itself.
+                        </p>  
+                    </div>  
+                    
+                </div> 
+            </div>   
         </div>
     </div>   
     <footer>

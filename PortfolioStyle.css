@@ -303,8 +303,8 @@ hr {
   .content-box p {
     font-size: 22px;
     color: var(--primcolor);
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 10px;
+    margin-right: 10px;
     text-align: left;
   }
 
@@ -368,6 +368,22 @@ hr {
 
   .div-large{
     width:75%;
+  }
+
+  .div-full {
+    width: 100%;
+  }
+
+  .div-center a {
+    color: var(--primcolor);
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  .div-center a:hover {
+    color: var(--seccolor);
+    background-color: transparent;
+    text-decoration: underline;
   }
 
   .max-height {
