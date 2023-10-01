@@ -195,6 +195,20 @@ hr {
     border-radius: 60px;
   }
 
+  .button-box {
+    background-color: var(--primcolor);
+    max-width: 800px;
+    max-height: 525px;
+    margin: 5px ;
+    overflow: hidden;
+    float: left;
+    border-radius: 15px;
+    border-color: var(--primcolor);
+    border-width: 3px;
+    border-style: solid;
+    position:relative;
+  }
+
   .main-window {
     margin-left: 5%;
     margin-right: 5%;
@@ -219,6 +233,7 @@ hr {
   .window-box a:hover{
     background-color: transparent;
   }
+
   .entry-box h1 {
     font-size: 20px;
     text-align: center;
@@ -337,10 +352,20 @@ hr {
     width: 20%;
   }
 
-  .content-box a:hover{
+  .button-color {
+    background-color: var(--primcolor) !important;
+  }
+
+  #CVButton {
+    color: var(--seccolor);
+    background-color: var(--primcolor);
+    border-color: var(--primcolor);
+  }
+
+  #CVButton a:hover {
     color: var(--primcolor);
-    background-color: var(--seccolor);
-    border-color: var(--seccolor);   
+    background-color: var(--primcolor);
+    border-color: var(--primcolor);
   }
 
   
@@ -403,6 +428,10 @@ hr {
   #Description{
     font-size: 18px;
     color: var(--seccolor);
+    text-align: center;
+    text-decoration: none;
+    font-family: Arial;
+    width: 100%;
   }
 
  
@@ -416,6 +445,25 @@ hr {
     justify-content: center;    
   }
 
+  .button {
+    height: 50px;
+    width: 300px;
+    border-radius:25px;
+    color: var(--seccolor);
+    background-color: var(--primcolor);
+
+  }
+
+  .button-text {
+    line-height: 50px;
+    font-size: 20px;
+  }
+
+  .content-box a:hover{
+    color: var(--primcolor);
+    background-color: var(--seccolor);
+    border-color: var(--seccolor);   
+  }
 
 
 @media (max-width:999px) {
