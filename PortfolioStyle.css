@@ -382,7 +382,7 @@ hr {
   .div-center {
     display: flex;
     justify-content: center;
-    width:80%;
+    width: 80%;
     margin-bottom: 75px;
     flex-wrap:wrap;
   }
@@ -488,11 +488,19 @@ hr {
   }  
 
   .div-small {
-    width:80%;
+    width:100%;
   }
 
   .div-large {
-    width:80%;
+    width: 100%;
+  }
+
+  .div-center {    
+    width: 100%;  
+  }
+  .content-box p {
+    font-size: 20px;
+   
   }
 }
 
