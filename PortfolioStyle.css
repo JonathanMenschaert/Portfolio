@@ -472,7 +472,7 @@ hr {
     display: none;      
   }
 
-  .navbar a.icon {
+  .navbar a.menu-icon {
     float: right;
     display: block;
     position: absolute;
@@ -514,7 +514,7 @@ hr {
   .navbar a {
     display: all;
   }
-  .navbar a.icon{
+  .navbar a.menu-icon{
     display: none;
   }
 
