@@ -25,17 +25,95 @@
         <div class="content-box">
             <br><br>           
             <p>
-                <h1>Procedural Quest System</h1><br>
-                
+                <h1>Procedural Quest System</h1><br>                
             </p>  
             <div class="content-box-center">
                 <div class="icon-box">
-                    <a class="window-box icon" href="https://plorigon.itch.io/towertricksters" title="Redirect to Github Page of this project" target="_blank" rel="noopener noreferrer" >
+                    <a class="window-box icon" href="https://github.com/JonathanMenschaert/Procedural-Quests" title="Redirect to Github Page of this project" target="_blank" rel="noopener noreferrer" >
                         <img class="icon" src="../icons/github-mark.png"/>
                     </a>
                 </div>                
-            </div>                  
+            </div>    
+            <h2>
+                Goals
+            </h2>
+            <div class="content-box-center">
+                <div class="div-center">
+                    <div class="div-full">
+                        <p>               
+                            <ul>
+                                <li>
+                                    Learning to use the c++ API of Unreal Engine 
+                                </li>
+                                <li>
+                                    Creating a quest system based on Goal Oriented Action Programming or GOAP
+                                </li>
+                            </ul>
+                            
+                        </p>   
+                    </div>    
+                </div> 
+            </div>
+            <h2>
+                Introduction
+            </h2>
+            <div class="content-box-center">
+                <div class="div-center">
+                    <div class="div-full">
+                        <p>               
+                            I love playing RPG and story driven games, and with that usually come various quests you can complete to advance in the game. 
+                            Unfortunately, those quests are often quite rigid and don't allow for an individual experience, forcing everyone to play the quest in the same way.
+                            Once I learned about Goal Oriented Action Planning, or abbreviated GOAP, I immediately thought of the possibility to use this technique in another way. 
+                            GOAP is normally used to dynamically drive the AI behaviour of NPCS in games by breaking it up in individual tasks. 
+                            Since a quest is composed of a series of tasks that the player needs to complete, in theory it could be used perfectly to drive a dynamic quest system.
+                            The system would look at the world state while building a quest, and will keep doing so every time something changes. 
+                            This means that the quest can be adjusted to what the player already did before receiving the quest, 
+                            and can also adapt to what the player does after starting the quest.           
+                        </p>   
+                    </div>    
+                </div> 
+            </div>
+            <h2>
+                The Concept
+            </h2>
+            <div class="content-box-center">
+                <div class="div-center">
+                    <div class="div-full">
+                        <p>               
+                            As mentioned earlier, GOAP is used to dynamically drive AI behaviour, but now I am using it for different purpose, 
+                            so how do the different concepts map onto it? COMPARISON NEEDED
+                            <ul>
+                                <li>
+                                    Effects and Preconditions:
+                                    The effect is needed to notify the worldstate that a certain part of a quest has been completed and it is ready to move on to the next objective.
+                                    The precondition describes the effect(s) that need(s) to be completed in order to access the action it is attached to. 
+                
+                                </li>
+                                <li>
+                                    Action or Objective: The main building block of the quest, it tells the player what to do. 
+                                    There is one important difference between GOAP actions and this: in GOAP, the actions actively tell the AI what to do constantly, but here, 
+                                    they take on a passive role, waiting for the player to complete what is required. Once the requirements are fullfilled, the action relays it's effect to the world state and the next objective can start.
+                                </li>
+                                <li>
+                                    Goal: The starting point of a quest. It contains all the necessary information to effectively built a quest. Once the player reaches this block, the quest is completed.
+                                </li>
+                                
+                                <li>
+                                    The Planner: This is the brain of the operation. It starts by taking the preconditions of the goal, and look for an action that has that as an effect. 
+                                    If the action also has a precondition, it will try to find an Action with those effects. If there are multiple actions that match, both will be saved a node tree. 
+                                    This will repeat until an action with preconditions that match the world state, or no preconditions, is found.
+                                    Then it will start building the quest with the gathered information.
+                                </li>
+                                <li>
+                                    The Agent: A NPC the GOAP system is controlling, however, in this case there is no need for that, as the player can be considered the agent in this case.
+                                </li>
+                            </ul>
+                        </p>   
+                    </div>    
+                </div> 
+            </div>              
         </div>
+        
     </div>   
     <footer>
         <div class="footer-body">
