@@ -422,8 +422,9 @@ hr {
   }
 
   #Header {
-    text-align:center;
+    text-align: left;
     color: var(--seccolor);
+    font-size: 18px;
   }
 
   #Description{
