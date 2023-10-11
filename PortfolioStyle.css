@@ -337,6 +337,7 @@ hr {
   .content-box li {
     font-size: 22px;
     color: var(--primcolor);
+    margin-bottom: 20px;
   }
 
   .content-box h1{
