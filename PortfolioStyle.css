@@ -443,6 +443,10 @@ hr {
     width: 100%;
   }
 
+
+  .bold-text{
+    font-weight: bold;
+  }
  
   .footer-body{
     width: 50%;
