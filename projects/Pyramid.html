@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <link rel="icon" type="image/x-icon" href="../icons/eye-logo.png">
+    <link rel="stylesheet" href="../PortfolioStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../PortfolioScripts.js"></script>
+</head>
+<body>
+    <div class="navbar" id="NavBar">        
+        <a href="../index.html">Home</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../about.html">About</a>
+        <a href="javascript::void(0);" class="menu-icon" onclick="switchNavBar()">
+            <i class="fa fa-bars"></i>
+        </a>        
+    </div>  
+    <div class="main-window">
+        <div class="content-box">
+            <br><br>           
+            <p>
+                <h1>Pyramid</h1><br>
+                
+            </p>  
+            <div class="content-box-center">
+                <div class="icon-box">
+                    <a class="window-box icon" href="https://github.com/JonathanMenschaert/PyramidGame" title="Redirect to Github Page of this project" target="_blank" rel="noopener noreferrer" >
+                        <img class="icon" src="../icons/github-mark.png"/>
+                    </a>
+                </div>                
+            </div> 
+            <h2>
+                Goal
+            </h2>
+            <div class="content-box-center">
+                <div class="div-center">
+                    <div class="div-large">
+                        <p>               
+                            Creating a networked game using Unreal 5.3 and learning about the other different aspects of the engine I was not familiar with yet in both c++ and blueprint.     
+                                      
+                        </p>   
+                    </div> 
+                </div> 
+            </div> 
+            <div class="content-box-center">
+                <div class="div-center">
+                    <div class="div-small">
+                        <image class="entry-box-image" src="Pyramid/EmptyHallway.png" alt="Pyramid Image" />
+                    </div>  
+                </div> 
+            </div> 
+            <h2>
+                Introduction
+            </h2>
+            <div class="content-box-center">
+                <div class="div-center">
+                    <div class="div-large">
+                        <p>               
+                            After completing my studies as a game developer in school, there was one aspect I was still severly lacking in, namely networking games. This was because it never appeared in the curriculum.<br>
+                            So, I decided to create a small game in Unreal 5.3 to learn how to do it. Question was, what game? I did not want to set my scope too high, the goal was not to create a massive game after all.<br>
+                            After a while, a friend of mine gave me the idea to recreate a boardgame, and make it networked. This was perfect for the purpose, I went with a game I liked to play, Pyramid.<br>
+                            One player plays the role of the mummy, who has the goal to catch the treasure hunters. The catch here is that the mummy cannot see the treasure hunters and needs to deduce the whereabouts based on the treasures they steal.<br>
+                            The goal of the treasure hunters is obviously to try to steal their designated treasures and avoid the mummy.<br>
+                            The mummy wins if they catch a hunter a certain amount of times, based on the amount of players. A treasure hunter wins when they stole all the assigned treasures.<br>
+                            There are plenty of things that can be networked here, so this project is a nice opportunity to learn it!
+                                        
+                        </p>   
+                    </div>     
+                </div> 
+            </div>
+            <h2>
+                Scope
+            </h2>
+            <div class="content-box-center">
+                <div class="div-center">
+                    <div class="div-small">
+                        <p>               
+                            I read through the rulebook to refresh my knowledge of the game and to get an idea of what different things I needed to implement.<br>
+                            At first, I wanted to implement all the rules as they were described in the booklet, but I quickly realised that the scope would get a bit too large.<br>
+                            Additionally, by enforcing the rules in a rigid way, the player would have no freedom anymore to try out different things,<br>
+                            so in the end I decided to create the game in such a way that it would be possible to play the game according to the described rules, but that it can be changed at any time.<br>
+                                    
+                        </p>   
+                    </div> 
+                    <div class="div-small">
+                        <image class="entry-box-image" src="Pyramid/MapView.png" alt="Pyramid Image" />
+                    </div>  
+                </div> 
+            </div>
+            <h2>
+                The Code
+            </h2>
+            <div class="content-box-center">
+                <div class="div-center">
+                    <div class="div-full">
+                        <p> 
+                            Before I could make the game networked, I had to create a base from which I could work. 
+
+                             I first started creating a procedural generator for the dungeon itself. A dungeon could be loaded in from an image based on the colors of each pixel<br>
+                             I did this to make it easier to make changes later if needed. This also allowed me to create a small dungeon for the main menus later on.<br>  
+                             The biggest difficulty here was making sure the directions lined up correctly with the directions provided in the image.<br>
+                             Then I created the two characters needed for the game and implemented them by giving proper movement and (temporary) animations.<br><br>
+
+                             Now that I had a base to work with, I could start making the game networked. After setting the necessary actors to replicate to the clients, I managed to get it working.<br>
+                             Or so I thought, some changes, such as changes to the colliders do apparently not get replicated to the client automatically. <br>
+
+                             Because I wanted to avoid too many colliders in the game, I decided to make the entire floor have the same collider instead of each of the tiles having their own floor collider.<br>
+                             This meant the floor collider had to be resized to fit the procedurally generated dungeon. However, the client never updated the sizes.<br>
+                             Eventually, I figured out a way around it by changing the code slightly. However, this would not be the last time I had to fight with the collision changes. <br><br>
+                            
+                             Despite using the builtin replication notify system of Unreal to update the dungeon tile collisions, they never got updated correctly on the client. <br>
+                             Eventually, I had to resort to using remote procedure calls to get this part working correctly. With the dungeon done, I could start on implementing the actual gameplay elements.<br><br>
+                        </p>   
+                    </div>  
+                    <div class="div-small">
+                        <p> 
+                             Since it is originally a board game, each of the players gets a turn to do what they need to do, so I implemented a basic turnsystem that would give the player the ability to move 5 tiles in any horizontal or vertical direction.<br>
+                             Later on, this was replaced by a dice system, where the player has the ability to pick out a die that fits their current move or reroll until they have the die they want.<br>
+                             When the dice start rolling, a request is made to the server to send back an array of random numbers that are then linked to the correct die. Once the dice have their value, they stop rolling and end up on the randomized value.<br>                             
+                             Once the player is happy with the value, they can select the die and click on it, after which the amount is sent back to the server and solidified as the max amount of tiles the player can walk that turn.<br><br><br>
+                        </p>   
+                    </div>  
+                    <div class="div-small">
+                        <image class="entry-box-image" src="Pyramid/DiceRoll.png" alt="Pyramid Image" />
+                    </div>  
+                    <div class="div-small">
+                        <image class="entry-box-image" src="Pyramid/Notebook.png" alt="Pyramid Image" />
+                    </div> 
+                    <div class="div-small">
+                        <p> 
+                            Of course, there is more to do in a turn than just walking around. The hunters received a list of treasures they need to steal when the game started from the server.<br> 
+                            Syncing this caused a lot of problems as the actor did not always exist yet on the client when the sync attempt was made, so some addition RPC functions were added to make sure this sync was always successful.<br>
+                            if the treasure hunter then ends up on a tile containing a treasure they need, the treasure is unlocked and can be picked up.<br><br> 
+                            Whenever an explorer finds a treasure or a mummy catches an explorer, a serverwide notification is sent out by means of an RPC function. This way, everyone is aware of what just happened.<br><br><br>
+                        </p>   
+                    </div> 
+                    <br>
+                    <div class="div-small">
+                        <p> 
+                            As I wanted to create a menu where the players could pick their name and the server name, I replaced the default Unreal online subsystem by the advanced sessions plugin, which allowed for additional settings to be sent over more easily.<br><br>
+                        </p>   
+                    </div> 
+                    <div class="div-small">
+                        <image class="entry-box-image" src="Pyramid/HostMenu.png" alt="Pyramid Image" />
+                    </div> 
+                </div> 
+            </div>    
+            <h2>
+                Conclusion
+            </h2>
+            <div class="content-box-center">
+                <div class="div-center">
+                    <div class="div-large">
+                        <p>               
+                           This project pushed me to learn more of what is possible in Unreal Engine, not in the least what is possible with their network capabilities.<br>
+                           Making sure all gameplay elements work correctly without messing up over the network was quite a challenge, but one I believe I succeeded in.<br>                                   
+                           I also learned about things I was not really using before, and I improved on what I already knew about the engine.<br>
+                           This turned out a lot bigger than I first had anticipated, as I wanted to make it somewhat look and feel good too. Though there is definitely room to polish the different gameplay elements.<br>
+                           I really enjoyed working on this project, so there might be more like it in the future!<br>
+                        </p>   
+                    </div>  
+                </div> 
+            </div>
+            <h2>
+                What's Next?
+            </h2>
+            <div class="content-box-center">
+                <div class="div-center">
+                    <div class="div-large">
+                        <p>               
+                           Given that the main goal of this project was learning more about the Unreal Engine, with a focus on networking, <br>
+                           I believe I can use this project as a stepping stone to learn more about the darker corners of the engine I did not fully discover yet.<br>
+                           I also mentioned in the conclusion that there was a need to improve on the polish for the gameplay elements, so that is also something that can be done.<br>
+                        </p>   
+                    </div>  
+                </div> 
+            </div>              
+        </div>        
+    </div>   
+    <footer>
+        <div class="footer-body">
+            <hr>
+            <br>
+            &#169; <script>document.write(new Date().getFullYear())</script> - Jonathan Menschaert
+        </div>
+    </footer>
+</body>
+</html>
