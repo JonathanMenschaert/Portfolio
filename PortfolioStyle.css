@@ -195,6 +195,14 @@ hr {
     border-radius: 60px;
   }
 
+  .fallback-font {
+    color: var(--primcolor);
+    text-decoration: none;
+    font-family: Arial;
+    font-size: 30px;
+    text-align: center;
+  }
+
   .button-box {
     background-color: var(--primcolor);
     max-width: 800px;
