@@ -1,10 +1,9 @@
 .window-box {
     background-color: var(--primcolor);
+    display: flex;
     max-width: 800px;
     max-height: 525px;
     margin: 5px ;
-    overflow: hidden;
-    float: left;
     border-radius: 15px;
     border-color: var(--primcolor);
     border-width: 3px;
@@ -16,12 +15,15 @@
 .slide-window {
   justify-content: center;
   overflow: hidden;
-  
+  display: block;
+  width: 100%;
+  border-radius: 15px;
 }
 
 .slide-window input {
-  display: none;
+  display: all;
 }
+
 
 .slide-container {   
   width: 400%;
@@ -42,6 +44,7 @@
 
 .slide-25 {
   width: 25%;
+  transition: 1s;
 }
 
 /* Button control */
@@ -55,19 +58,57 @@
   bottom: 20px;
 }
 
+.nav-control-panel {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  background: rgb(from var(--primcolor) r g b / 50%);
+  border-radius: 15px;
+}
+
 .manual-btn {
   border: 2px solid var(--seccolor);
+  margin-top: 18px;
   padding: 5px;
+  height: 5px;
+  width: 5px;
   border-radius: 10px;
   cursor: pointer;
+  vertical-align: middle;
+}
+
+.nav-btn {
+  color: var(--seccolor);
+  cursor: pointer;
+  font-size: 30px;
+  margin: 10px 0px;
+}
+
+.nav-btn:not(:first-child) {
+  margin-left: 40px;
+  margin-right: 15px;
+}
+
+.nav-btn:not(:last-child) {
+  margin-right: 40px;
+  margin-left: 15px;
+}
+
+.nav-btn:hover {
+  color: var(--primcolor);
 }
 
 .manual-btn:not(:last-child) {
-  margin-right: 2%;
+  margin-right: 12px;
+}
+
+.manual-btn:nth-child(2) {  
+  margin-left: 12px;
 }
 
 .manual-btn:hover {
-  background: var(--seccolor);
+  background: var(--primcolor);
+  border: 2px solid var(--primcolor);
 }
 
 #radio1:checked ~ .first {
@@ -93,7 +134,6 @@
 /* highlight title containers */
 
 .title-container {
-  display: flex;
   position: absolute;
   justify-content: center;
   width: 100%;
@@ -104,6 +144,5 @@
   font-size: 30px;
   text-align: center;
   text-decoration: none;
-  font-family: Arial;
   color: var(--primcolor); 
 }

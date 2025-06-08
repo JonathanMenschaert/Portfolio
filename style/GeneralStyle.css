@@ -45,3 +45,7 @@ footer {
     position: relative;
 }
 
+.hide-element {
+  display: none;
+}
+
