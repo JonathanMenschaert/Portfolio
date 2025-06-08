@@ -7,20 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="icon" type="image/x-icon" href="icons/eye-logo.png">
-    <link rel="stylesheet" href="PortfolioStyle.css">
+    <link rel="stylesheet" href="style/GeneralStyle.css">
+    <link rel="stylesheet" href="style/NavbarStyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="PortfolioScripts.js"></script>
+    <script src="./scripts/GeneralScripts.js"></script>
 </head>
 <body>
-    <div class="navbar" id="NavBar">        
+    <div class="navbar" id="NavBar" onmouseleave="activateNavBar(false)">        
         <a href=index.html>Home</a>
         <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a>
         <a href="about.html">About</a>
-        <a href="javascript::void(0);" class="menu-icon" onclick="switchNavBar()">
+        <a href="javascript::void(0);" class="menu-icon" onmouseenter="activateNavBar(true)">
             <i class="fa fa-bars"></i>
         </a>        
-    </div> 
+    </div> <!--
     <div class="main-window">
         <div class="content-box-center">
             <div class="div-center div-small">
@@ -102,6 +103,6 @@
             <br>
             &#169; <script>document.write(new Date().getFullYear())</script> - Jonathan Menschaert
         </div>
-    </footer>
+    </footer>-->
 </body>
 </html>

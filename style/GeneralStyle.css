@@ -1,0 +1,14 @@
+:root {
+  --bgcolor: #272829;
+  --primcolor: #61677A; 
+  --seccolor: #D8D9DA;
+  --textcolor: #FFF6E0;
+}
+
+body {
+    background-color:var(--bgcolor);
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
