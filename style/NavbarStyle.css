@@ -12,29 +12,29 @@
     border-radius: 15px;
     box-shadow: 0px 5px 4px #2D2D2D, 0px -2px 4px #2D2D2D;
     margin-bottom: 25px;
-    justify-content: center; 
+    justify-content: center;
     display: flex;
     position: absolute;
     left: 12px;
     right: 12px;
     z-index: 99;
 }
-  
-  /* Style the links inside the navigation bar */
+
+/* Style the links inside the navigation bar */
 .navbar a {
-    
+
     color: var(--textcolor);
     text-align: center;
     padding: 14px 30px;
     text-decoration: none;
-    font-size: 26px;   
+    font-size: 26px;
     display: flex;
 }
 
-.navbar a.menu-icon{
+.navbar a.menu-icon {
     display: none;
 }
-  
+
 /* Change the color of links on hover */
 .navbar a:hover {
     color: var(--seccolor);
@@ -43,13 +43,73 @@
 
 @media (max-width:999px) {
 
+    @keyframes expandNavbar {
+        0% {
+            padding-bottom: 0px;
+        }
+
+        100% {
+            padding-bottom: 176px;
+        }
+    }
+
+    @keyframes collapseNavbar {
+        0% {
+            padding-bottom: 176px;
+        }
+
+        100% {
+            padding-bottom: 0px;
+        }
+    }
+
+    @keyframes expandMenuItems {
+        0% {
+            opacity: 0%;
+            font-size: 0px;
+            padding: 0;
+        }
+
+        1% {
+            font-size: 26px;
+            padding: 14px 30px;
+        }
+
+        100% {
+            opacity: 100%;
+            font-size: 26px;
+            padding: 14px 30px;
+        }
+    }
+
+    @keyframes collapseMenuItems {
+        0% {
+            opacity: 100%;
+            font-size: 26px;
+            padding: 14px 30px;
+        }
+
+        1% {
+            font-size: 0px;
+            padding: 0;
+        }
+
+        100% {
+            opacity: 0%;
+            font-size: 0px;
+            padding: 0;
+        }
+    }
+
     .navbar {
         justify-content: flex-start;
         display: block;
+        
     }
 
-    .navbar a:not(:first-child) {
-        display: none;      
+    .navbar a:not(:first-child):not(:last-child) {
+        display: none;
+        
     }
 
     .navbar a.menu-icon {
@@ -61,14 +121,35 @@
         font-size: 30px;
     }
 
-    @keyframes expandNavbar {
-        100% {display: flex;}
+    .navbar.expand {
+        animation-name: expandNavbar;
+        animation-duration: 0.15s;
+        animation-direction: normal;        
     }
 
-    .navbar.expand a {
-        display: flex;
-        /*animation-name: expandNavbar;
-        animation-duration: 1s;*/
+    .navbar.expand a:not(:first-child):not(:last-child) {
+        animation-name: expandMenuItems;
+        animation-duration: 0.05s;
+        animation-delay: 0.16s;
+        animation-direction: normal;
+        animation-fill-mode: backwards;
+        display: flex;        
+    }
+
+    .navbar.collapse {
+        animation-name: collapseNavbar;
+        animation-duration: 0.15s;
+        animation-delay: 0.06;
+        animation-direction: normal;
+        animation-direction: backwards;        
+    }
+
+    .navbar.collapse a:not(:first-child):not(:last-child) {
+        animation-name: collapseMenuItems;
+        animation-duration: 0.05s;
+        animation-direction: normal;
+        animation-fill-mode: backwards;
+        display: none;
     }
 
 }

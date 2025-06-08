@@ -15,14 +15,14 @@
     <script src="./scripts/MainPageScripts.js"></script>
 </head>
 
-<body>
+<body onresize="resetNavbar();">
     <div class="navbar-container">
-        <div class="navbar" id="NavBar" onmouseleave="activateNavBar(false)">
+        <div class="navbar" id="NavBar" onmouseleave="activateNavbar(false);">
             <a href=index.html>Home</a>
             <a href="projects.html">Projects</a>
             <a href="contact.html">Contact</a>
             <a href="about.html">About</a>
-            <a href="javascript::void(0);" class="menu-icon" onmouseenter="activateNavBar(true)">
+            <a href="#" class="menu-icon" onmouseenter="activateNavbar(true);">
                 <i class="fa fa-bars"></i>
             </a>
         </div>
@@ -48,13 +48,13 @@
 
         <div class="window-box slide-window">
             <div class="slide-container">
-                <button id="button-nav-left" class="hide-element" onclick="decreaseCounter()"></button>
+                <button id="button-nav-left" class="hide-element" onclick="decreaseCounter();"></button>
                 <input checked="checked" class="hide-element" type="radio" name="radio-btn" id="radio1"
-                    onclick="adjustManual(0)">
-                <input type="radio" class="hide-element" name="radio-btn" id="radio2" onclick="adjustManual(1)">
-                <input type="radio" class="hide-element" name="radio-btn" id="radio3" onclick="adjustManual(2)">
-                <input type="radio" class="hide-element" name="radio-btn" id="radio4" onclick="adjustManual(3)">
-                <button id="button-nav-right" class="hide-element" onclick="increaseCounter()"></button>
+                    onclick="adjustManual(0);">
+                <input type="radio" class="hide-element" name="radio-btn" id="radio2" onclick="adjustManual(1);">
+                <input type="radio" class="hide-element" name="radio-btn" id="radio3" onclick="adjustManual(2);">
+                <input type="radio" class="hide-element" name="radio-btn" id="radio4" onclick="adjustManual(3);">
+                <button id="button-nav-right" class="hide-element" onclick="increaseCounter();"></button>
                 <a class="slide-25 first" href="projects/DoA.html">
                     <div class="title-container">
                         <h2>
