@@ -1,0 +1,109 @@
+.window-box {
+    background-color: var(--primcolor);
+    max-width: 800px;
+    max-height: 525px;
+    margin: 5px ;
+    overflow: hidden;
+    float: left;
+    border-radius: 15px;
+    border-color: var(--primcolor);
+    border-width: 3px;
+    border-style: solid;
+    position: relative;
+}
+
+/* Slider css */
+.slide-window {
+  justify-content: center;
+  overflow: hidden;
+  
+}
+
+.slide-window input {
+  display: none;
+}
+
+.slide-container {   
+  width: 400%;
+  height: 100%;
+  display: flex;
+}
+
+.slide-img-container {
+    overflow: hidden;
+    height: 100%;
+}
+
+.slide-image{
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.slide-25 {
+  width: 25%;
+}
+
+/* Button control */
+
+.navigation-manual {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 0px;
+  position: absolute;
+  bottom: 20px;
+}
+
+.manual-btn {
+  border: 2px solid var(--seccolor);
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 2%;
+}
+
+.manual-btn:hover {
+  background: var(--seccolor);
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0%;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -25%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -50%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -75%;
+}
+
+.manual-btn-selected {
+  background: var(--seccolor);
+}  
+
+/* highlight title containers */
+
+.title-container {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.title-container h2 {
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  font-family: Arial;
+  color: var(--primcolor); 
+}

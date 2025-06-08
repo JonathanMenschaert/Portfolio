@@ -9,20 +9,24 @@
     <link rel="icon" type="image/x-icon" href="icons/eye-logo.png">
     <link rel="stylesheet" href="style/GeneralStyle.css">
     <link rel="stylesheet" href="style/NavbarStyle.css">
+    <link rel="stylesheet" href="style/ProjectHighlightStyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="./scripts/GeneralScripts.js"></script>
+    <script src="./scripts/MainPageScripts.js"></script>
 </head>
 <body>
-    <div class="navbar" id="NavBar" onmouseleave="activateNavBar(false)">        
-        <a href=index.html>Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-        <a href="about.html">About</a>
-        <a href="javascript::void(0);" class="menu-icon" onmouseenter="activateNavBar(true)">
-            <i class="fa fa-bars"></i>
-        </a>        
-    </div> <!--
-    <div class="main-window">
+    <div class="navbar-container">
+        <div class="navbar" id="NavBar" onmouseleave="activateNavBar(false)">        
+            <a href=index.html>Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+            <a href="javascript::void(0);" class="menu-icon" onmouseenter="activateNavBar(true)">
+                <i class="fa fa-bars"></i>
+            </a>        
+        </div> 
+    </div>
+    <div class="main-window"><!--
         <div class="content-box-center">
             <div class="div-center div-small">
                 <p id="Header">
@@ -39,63 +43,62 @@
                 <br><br>
             </div>           
         </div>
-        <br>
-        <div class="window-box slider">
-            <div class="slides">                
+        <br>-->
+        <div class="window-box slide-window">
+            <div class="slide-container">                
                 <input checked="checked" type="radio" name="radio-btn" id="radio1" onclick="adjustManual(1)">
                 <input type="radio" name="radio-btn" id="radio2" onclick="adjustManual(2)">
                 <input type="radio" name="radio-btn" id="radio3" onclick="adjustManual(3)">
                 <input type="radio" name="radio-btn" id="radio4" onclick="adjustManual(4)">
-                <a class="slide first" href="projects/DoA.html">                                      
+                <a class="slide-25 first" href="projects/DoA.html">                                      
                     <div class="title-container">
                         <h2>
                             Dungeon Of Apostasy
                         </h2>
                     </div>
-                    <div class="img-container">                       
-                        <image class="slide-container" src="projects/DoA/DungeonOfApostasy.png" alt="Project Image" />  
+                    <div class="slide-img-container">                       
+                        <image class="slide-image" src="projects/DoA/DungeonOfApostasy.png" alt="Project Image" />  
                     </div> 
                 </a>
-                <a class="slide" href="projects/Pyramid.html">   
+                <a class="slide-25" href="projects/Pyramid.html">   
                     <div class="title-container">
                         <h2>
                             Pyramid
                         </h2>
                     </div>                
-                    <div class="img-container">                       
-                        <image class="slide-container" src="projects/Pyramid/MummyEncounter.png" alt="Project" />  
+                    <div class="slide-img-container">                       
+                        <image class="slide-image" src="projects/Pyramid/MummyEncounter.png" alt="Project" />  
                     </div>                    
                     
                 </a>
-                <a class="slide" href="projects/ProceduralQuestSystem.html">         
+                <a class="slide-25" href="projects/ProceduralQuestSystem.html">         
                     <div class="title-container">
                         <h2>
                             Procedural Quest System using GOAP
                         </h2>
                     </div>          
-                    <div class="img-container">                       
-                        <image class="slide-container" src="projects/ProceduralQuestSystem/ProceduralQuestSystem.png" alt="Project Image" />  
+                    <div class="slide-img-container">                       
+                        <image class="slide-image" src="projects/ProceduralQuestSystem/ProceduralQuestSystem.png" alt="Project Image" />  
                     </div>                    
                 </a>                   
-                <a class="slide" href="projects/TowerTricksters.html">
+                <a class="slide-25" href="projects/TowerTricksters.html">
                     <div class="title-container">
                         <h2>
                             Tower Tricksters
                         </h2>
                     </div>                  
-                    <div class="img-container">                       
-                        <image class="slide-container" src="projects/TowerTricksters/TowerTricksters.png" alt="Project Image" />  
+                    <div class="slide-img-container">                       
+                        <image class="slide-image" src="projects/TowerTricksters/TowerTricksters.png" alt="Project Image" />  
                     </div>                    
                 </a>                              
             </div>
-
             <div class="navigation-manual">
                 <label for="radio1" id="radionav1" class="manual-btn manual-btn-selected" ></label>
                 <label for="radio2" id="radionav2" class="manual-btn"></label>
                 <label for="radio3" id="radionav3" class="manual-btn"></label>
                 <label for="radio4" id="radionav4" class="manual-btn"></label>
             </div>
-        </div>     
+        </div>  
     </div> 
     <footer>    
         <div class="footer-body">
@@ -103,6 +106,6 @@
             <br>
             &#169; <script>document.write(new Date().getFullYear())</script> - Jonathan Menschaert
         </div>
-    </footer>-->
+    </footer>
 </body>
 </html>
