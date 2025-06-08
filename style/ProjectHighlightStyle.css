@@ -9,6 +9,7 @@
     border-width: 3px;
     border-style: solid;
     position: relative;
+    overflow: hidden;
 }
 
 /* Slider css */
@@ -55,7 +56,7 @@
   justify-content: center;
   margin-bottom: 0px;
   position: absolute;
-  bottom: 20px;
+  bottom: 4px;
 }
 
 .nav-control-panel {
@@ -95,7 +96,7 @@
 }
 
 .nav-btn:hover {
-  color: var(--primcolor);
+  color: var(--textcolor);
 }
 
 .manual-btn:not(:last-child) {
@@ -107,8 +108,8 @@
 }
 
 .manual-btn:hover {
-  background: var(--primcolor);
-  border: 2px solid var(--primcolor);
+  background: var(--textcolor);
+  border: 2px solid var(--textcolor);
 }
 
 #radio1:checked ~ .first {
@@ -134,15 +135,42 @@
 /* highlight title containers */
 
 .title-container {
+  display: flex;
   position: absolute;
   justify-content: center;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 0px;
+  z-index: 1;
+  
 }
 
 .title-container h2 {
-  font-size: 30px;
+  font-size: 18px;
+  width: 500;
+  justify-content: center;
   text-align: center;
   text-decoration: none;
-  color: var(--primcolor); 
+  color: var(--seccolor); 
+}
+
+.svg-block-bottom {
+  color: var(--primcolor);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 0px;
+  position: absolute;
+  bottom: 0px;
+  overflow: hidden;
+}
+
+.svg-block-top {
+  color: var(--primcolor);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 0px;
+  position: absolute;
+  top: 0px;
+  overflow: hidden;
 }
