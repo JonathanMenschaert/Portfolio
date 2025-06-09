@@ -5,16 +5,20 @@ var maxImages = 4;
 function adjustCounter(newCounter) 
 {
     counter = counter % maxImages;
-    document.getElementById("radionav" + (counter + 1)).className = "manual-btn";
+    idCounter = counter + 1;
+    document.getElementById("radionav" + idCounter).className = "manual-btn";
+    document.getElementById("highlight" + idCounter).className = "";
+    
     counter = newCounter % maxImages;
-    document.getElementById("radionav" + (counter + 1)).className = "manual-btn manual-btn-selected";
-    document.getElementById("radio" + (counter + 1)).checked = "checked";
+    idCounter = counter + 1;
+    document.getElementById("highlight" + idCounter ).className = "title-pop-in";
+    document.getElementById("radionav" + idCounter ).className = "manual-btn manual-btn-selected";
+    document.getElementById("radio" + idCounter ).checked = "checked";
 }
 
 function adjustManual(newCounter) 
 {   
     adjustCounter(newCounter);    
-    scroll = false;    
 }
 
 function increaseCounter()
