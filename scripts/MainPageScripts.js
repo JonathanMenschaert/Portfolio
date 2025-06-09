@@ -11,14 +11,15 @@ function adjustCounter(newCounter)
     
     counter = newCounter % maxImages;
     idCounter = counter + 1;
-    document.getElementById("highlight" + idCounter ).className = "title-pop-in";
+    document.getElementById("highlight" + idCounter ).className = "title-fade-in";
     document.getElementById("radionav" + idCounter ).className = "manual-btn manual-btn-selected";
     document.getElementById("radio" + idCounter ).checked = "checked";
 }
 
 function adjustManual(newCounter) 
 {   
-    adjustCounter(newCounter);    
+    adjustCounter(newCounter); 
+    scroll = false;   
 }
 
 function increaseCounter()
