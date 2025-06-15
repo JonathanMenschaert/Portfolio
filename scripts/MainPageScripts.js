@@ -5,11 +5,11 @@ var maxImages = 4;
 function adjustCounter(newCounter) 
 {
     counter = counter % maxImages;
-    idCounter = counter + 1;
+    let idCounter = counter + 1;
     document.getElementById("radionav" + idCounter).className = "manual-btn";
     document.getElementById("highlight" + idCounter).className = "";
-    
     counter = newCounter % maxImages;
+
     idCounter = counter + 1;
     document.getElementById("highlight" + idCounter ).className = "title-fade-in";
     document.getElementById("radionav" + idCounter ).className = "manual-btn manual-btn-selected";
