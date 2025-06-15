@@ -3,6 +3,7 @@
   --primcolor: #F1E9D2;
   --seccolor: #D8D9DA;
   --textcolor: #4A3C3B; 
+  --shadowcolor: #7F7D79;
 } */
 
 :root {
@@ -10,6 +11,7 @@
   --primcolor: #61677A;
   --seccolor: #D8D9DA;
   --textcolor: #FFF6E0; 
+  --shadowcolor: #2D2D2D;
 }
 
 body {
