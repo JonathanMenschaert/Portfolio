@@ -1,6 +1,13 @@
+/* :root {
+  --bgcolor: #95928D;
+  --primcolor: #F1E9D2;
+  --seccolor: #D8D9DA;
+  --textcolor: #4A3C3B; 
+} */
+
 :root {
   --bgcolor: #272829;
-  --primcolor: #61677A; /*#F1E9D2;*/
+  --primcolor: #61677A;
   --seccolor: #D8D9DA;
   --textcolor: #FFF6E0; 
 }

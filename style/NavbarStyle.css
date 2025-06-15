@@ -7,10 +7,10 @@
 
 /* Add a dark background color to the top navigation */
 .navbar {
-    background-color: var(--primcolor);
+    background: var(--primcolor);
     overflow: hidden;
     border-radius: 15px;
-    box-shadow: 0px 5px 4px #2D2D2D, 0px -2px 4px #2D2D2D;
+    box-shadow: 0px 5px 4px #7F7D79, 0px -2px 4px #7F7D79;
     margin-bottom: 25px;
     justify-content: center;
     display: flex;
@@ -18,6 +18,7 @@
     left: 12px;
     right: 12px;
     z-index: 99;
+    opacity: 100%;
 }
 
 /* Style the links inside the navigation bar */

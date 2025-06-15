@@ -10,6 +10,7 @@
     border-style: solid;
     position: relative;
     overflow: hidden;
+    opacity: 100%;
 }
 
 /* Slider css */
@@ -162,7 +163,7 @@
 }
 
 /* animate title container on slide move */
-.title-container .title-fade-in {
+.title-container .title-pop-in {
   animation-name: titleFade;
   animation-duration: 1.2s;
   animation-fill-mode: backwards;
