@@ -1,18 +1,19 @@
-/* :root {
-  --bgcolor: #95928D;
-  --primcolor: #F1E9D2;
-  --seccolor: #D8D9DA;
-  --textcolor: #4A3C3B; 
-  --shadowcolor: #7F7D79;
-} */
-
 :root {
+  --bgcolor: #705545;
+  --primcolor: #E9D9B8;
+  --seccolor: #CEC4A9;
+  --textcolor: #49381B; 
+  --texthovercolor: #CEC4A9;
+  --shadowcolor: #70554560;
+} 
+
+/*:root {
   --bgcolor: #272829;
   --primcolor: #61677A;
   --seccolor: #D8D9DA;
   --textcolor: #FFF6E0; 
   --shadowcolor: #2D2D2D;
-}
+}*/
 
 body {
     background-color:var(--bgcolor);

@@ -23,7 +23,6 @@
 
 /* Style the links inside the navigation bar */
 .navbar a {
-
     color: var(--textcolor);
     text-align: center;
     padding: 14px 30px;
@@ -38,8 +37,7 @@
 
 /* Change the color of links on hover */
 .navbar a:hover {
-    color: var(--seccolor);
-    text-decoration: underline
+    color: var(--texthovercolor);
 }
 
 @media (max-width:999px) {
