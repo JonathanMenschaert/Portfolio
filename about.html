@@ -7,59 +7,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
     <link rel="icon" type="image/x-icon" href="icons/eye-logo.png">
-    <link rel="stylesheet" href="PortfolioStyle.css">
+    <link rel="stylesheet" href="style/GeneralStyle.css">
+    <link rel="stylesheet" href="style/NavbarStyle.css">
+    <link rel="stylesheet" href="style/PaperStyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="PortfolioScripts.js"></script>
+    <script src="./scripts/GeneralScripts.js"></script>
 </head>
-<body>
-    <div class="navbar" id="NavBar">        
-        <a href=index.html>Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-        <a href="about.html">About</a>
-        <a href="javascript::void(0);" class="menu-icon" onclick="switchNavBar()">
-            <i class="fa fa-bars"></i>
-        </a>        
-    </div>  
-    <div class="main-window">
-        <div class="content-box">
-            <br><br><br><br>           
-            <h1>Hello!</h1><br>
-            <div class="content-box-center">
-                <div class="div-small">
-                    <p id="Header">                
-                        My name is Jonathan Menschaert. <br>
-                        I am an aspiring game developer interested in the AI and other techniques used in games to create an adaptive experience. <br>
-                        My interests also go beyond the AI behaviors of npcs, I am fascinated by anything that is able adjust dynamically to the situation, 
-                        and will gladly learn more about it and more! <br><br>
-                        
-                        Additionally, I also really like to build tools that can assist me in creating the games I want to make.<br>
-                        It can sometimes be very time-consuming to create things entirely by hand, especially in situations where there are specific needs for a project.<br>
-                        In such situations it is great to have specialized tools at hand that can automate a part of the process or at least make it easier.<br><br>
 
-                        Because I often experiment with the things mentioned above, I come into contact with a wide range of software and techniques, <br>
-                        which I sometimes add to my workflow for a project, so I consider myself a quick learner.<br>
-                        I also don't give up easily. I will always try to figure out a solution to a potential problem, and I am not afraid to explore different approaches if the situation asks for it.<br><br>
-                    </p>   
-                    <br><br>
-                </div>                
-            </div>
-              
-            <div class="content-box-center">
-                <a class="window-box button" href="media/JonathanMenschaert_CV.pdf" target="_blank" rel="noopener noreferrer" >
-                    <div class="button-text">
-                        Download CV   
-                    </div>                 
-                </a> 
-            </div>                           
+<body>
+    <div class="navbar-container">
+        <div class="navbar" id="NavBar" onmouseleave="activateNavbar(false);">
+            <a href=index.html>Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+            <a href="#" class="menu-icon" onmouseenter="activateNavbar(true);">
+                <i class="fa fa-bars"></i>
+            </a>
         </div>
-    </div>   
+    </div>
+    <div class="main-window">
+        <div class="paper">
+            <h1>Hello!</h1><br>
+
+            <p id="Header">
+                My name is Jonathan Menschaert. <br>
+                I am an aspiring game developer interested in the AI and other techniques used in games to create an
+                adaptive experience. <br>
+                My interests also go beyond the AI behaviors of npcs, I am fascinated by anything that is able adjust
+                dynamically to the situation,
+                and will gladly learn more about it and more! <br><br>
+
+                Additionally, I also really like to build tools that can assist me in creating the games I want to
+                make.<br>
+                It can sometimes be very time-consuming to create things entirely by hand, especially in situations
+                where there are specific needs for a project.<br>
+                In such situations it is great to have specialized tools at hand that can automate a part of the process
+                or at least make it easier.<br><br>
+
+                Because I often experiment with the things mentioned above, I come into contact with a wide range of
+                software and techniques, <br>
+                which I sometimes add to my workflow for a project, so I consider myself a quick learner.<br>
+                I also don't give up easily. I will always try to figure out a solution to a potential problem, and I am
+                not afraid to explore different approaches if the situation asks for it.<br><br>
+            </p>
+            <br><br>            
+            <a class="paper-button" href="media/JonathanMenschaert_CV.pdf" target="_blank" rel="noopener noreferrer">
+                Download CV
+            </a>            
+        </div>
+    </div>
     <footer>
         <div class="footer-body">
             <hr>
             <br>
-            &#169; <script>document.write(new Date().getFullYear())</script> - Jonathan Menschaert
+            &#169;
+            <script>document.write(new Date().getFullYear())</script> - Jonathan Menschaert
         </div>
     </footer>
 </body>
+
 </html>
