@@ -1,10 +1,14 @@
 :root {
   --bgcolor: #705545;
   --primcolor: #E9D9B8;
-  --seccolor: #CEC4A9;
+  --texthovercolor: #9F8D77;
   --textcolor: #49381B;
-  --texthovercolor: #CEC4A9;
+  --seccolor: #CEC4A9;
   --shadowcolor: #70554560;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /*:root {

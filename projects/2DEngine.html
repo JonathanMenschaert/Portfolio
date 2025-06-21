@@ -18,29 +18,42 @@
 <body>
     <div class="navbar-container">
         <div class="navbar" id="NavBar" onmouseleave="activateNavbar(false);">
-            <a href=index.html>Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-            <a href="about.html">About</a>
+            <a href="../index.html">Home</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../contact.html">Contact</a>
+            <a href="../about.html">About</a>
             <a href="#" class="menu-icon" onmouseenter="activateNavbar(true);">
                 <i class="fa fa-bars"></i>
             </a>
         </div>
     </div>
-    <div class="main-window">
-
+    <div class="main-window">        
+        <p>
+        <h1>2D Game Engine</h1>
+        <br>
+        </p>
+        <div class="shortcut-container">
+            <h1> Content </h1>
+            <ul class="shortcut-list">
+                <li>
+                    <a href="#Goal">Goal</a>
+                </li>
+                <li>
+                    <a href="#Game">The Game</a>
+                </li>
+                <li>
+                    <a href="#Conclusion">Conclusion</a>
+                </li>
+            </ul>
+        </div>
         <div class="icon-container">
             <a class="icon-box icon" href="https://github.com/JonathanMenschaert/2DEngine"
                 title="Redirect to Github Page of this project" target="_blank" rel="noopener noreferrer">
                 <img class="icon" src="../icons/github-mark.png" />
             </a>
         </div>
-        <p>
-        <h1>2D Game Engine</h1>
-        <br>
-        </p>
         <div class="paper">
-            <h2>
+            <h2 id="Goal">
                 Goal
             </h2>
             <div class="full">
@@ -71,7 +84,7 @@
             </div>
         </div>
         <div class="paper">
-            <h2>The Game</h2>
+            <h2 id="Game">The Game</h2>
             <div class="half">
                 <p>
                     The game I was given to recreate was Pacman. The different gamemodes had to be filled in in the
@@ -99,7 +112,7 @@
             </div>
         </div>
         <div class="paper">
-            <h2>Conclusion</h2>
+            <h2 id="Conclusion">Conclusion</h2>
             <div class="full">
                 <p>
                     It was very interesting to see how the inner workings of an engine are written.
