@@ -7,142 +7,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2D Game Engine</title>
     <link rel="icon" type="image/x-icon" href="../icons/eye-logo.png">
-    <link rel="stylesheet" href="../PortfolioStyle.css">
+    <link rel="stylesheet" href="../style/GeneralStyle.css">
+    <link rel="stylesheet" href="../style/NavbarStyle.css">
+    <link rel="stylesheet" href="../style/PaperStyle.css">
+    <link rel="stylesheet" href="../style/ProjectStyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="../PortfolioScripts.js"></script>
+    <script src="../scripts/GeneralScripts.js"></script>
 </head>
+
 <body>
-    <div class="navbar" id="NavBar">        
-        <a href="../index.html">Home</a>
-        <a href="../projects.html">Projects</a>
-        <a href="../contact.html">Contact</a>
-        <a href="../about.html">About</a>
-        <a href="javascript::void(0);" class="menu-icon" onclick="switchNavBar()">
-            <i class="fa fa-bars"></i>
-        </a>        
-    </div>  
+    <div class="navbar-container">
+        <div class="navbar" id="NavBar" onmouseleave="activateNavbar(false);">
+            <a href=index.html>Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+            <a href="#" class="menu-icon" onmouseenter="activateNavbar(true);">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
     <div class="main-window">
-        <div class="content-box">
-            <br><br>           
-            <p>
-                <h1>2D Game Engine</h1><br>
-                
-            </p>  
-            <div class="content-box-center">
-                <div class="icon-box">
-                    <a class="window-box icon" href="https://github.com/JonathanMenschaert/2DEngine" title="Redirect to Github Page of this project" target="_blank" rel="noopener noreferrer" >
-                        <img class="icon" src="../icons/github-mark.png"/>
-                    </a>
-                </div>                
-            </div>   
+
+        <div class="icon-container">
+            <a class="icon-box icon" href="https://github.com/JonathanMenschaert/2DEngine"
+                title="Redirect to Github Page of this project" target="_blank" rel="noopener noreferrer">
+                <img class="icon" src="../icons/github-mark.png" />
+            </a>
+        </div>
+        <p>
+        <h1>2D Game Engine</h1>
+        <br>
+        </p>
+        <div class="paper">
             <h2>
                 Goal
             </h2>
-            <div class="content-box-center">
-                <div class="div-center">
-                    <div class="div-large">
-                        <p>               
-                            Creating a component-based 2D engine that also respects some other game programming patterns. 
-                            The required patterns are as follows:
-                            <ul>
-                                <li>
-                                    Game Loop
-                                </li>
-                                <li>
-                                    Update Method
-                                </li>
-                                <li>
-                                    Command
-                                </li>
-                                <li>
-                                    Observer
-                                </li>
-                                <li>
-                                    Component
-                                </li>
-                                <li>
-                                    State
-                                </li>
-                            </ul>            
-                        </p>   
-                        <p>               
-                            Aside from the above patterns, the engine or game must also make use of threading.
-                            The workings of the engine should be proven by writing a small game that makes use of the engine's functionality.    
-                            The game itself also has a few requirements:
-                            <ul>
-                                <li>
-                                    At least 3 levels
-                                </li>
-                                <li>
-                                    4 total lives
-                                </li>
-                                <li>
-                                    3 Gamemodes: Singleplayer, Co-op and Versus Mode
-                                </li>
-                                <li>
-                                    Sound
-                                </li>
-                                <li>
-                                    Playable with both keyboard and controller
-                                </li>
-                                <li>
-                                    Highscore list that persists between sessions
-                                </li>
-                            </ul>                      
-                        </p>
-                    </div>    
-                </div> 
-            </div>  
-            <h2>
-                The Game
-            </h2>
-            <div class="content-box-center">
-                <div class="div-center">
-                    <div class="div-small">
-                        <p>               
-                            The game I was given to recreate was Pacman. The different gamemodes had to be filled in in the following way:
-                            <ul>
-                                <li>
-                                    Singleplayer: The normal way to play pacman. The player collects the pac dots and the power pellets while the ghosts are trying to catch them.
-                                </li>
-                                <li>
-                                    Co-op: The same as singleplayer, but with two players instead of one.
-                                </li>
-                                <li>
-                                    Versus: One player plays the role of pacman and plays as normal, and the other possesses one of the ghosts and tries to hunt down the player.
-                                </li>
-                            </ul> 
-                        </p>   
-                    </div>  
-                    <div class="div-small">
-                        <image class="entry-box-image" src="2DEngine/2DEngineMenu.png" alt="Pacman Menu" />                      
-                    </div>  
-                </div>   
-            </div> 
-            <h2>
-                Conclusion
-            </h2>
-            <div class="content-box-center">
-                <div class="div-center">
-                    <div class="div-large">
-                        <p>               
-                            It was very interesting to see how the inner workings of an engine are written. 
-                            At the start of the project, some of the patterns did not seem that useful, 
-                            but once I started implementing them in the engine, it became clear why they are used. 
-                            Setting up The different programming patterns may seem overcomplicated for what it's worth, 
-                            but once it is, it is the key to working cleanly in a long-term project.                      
-                        </p>   
-                    </div>    
-                </div>
-            </div>           
+            <div class="full">
+                <p>
+                    Creating a component-based 2D engine that also respects some other game programming patterns.
+                    The required patterns are as follows:
+                </p>
+                <ul>
+                    <li>
+                        Game Loop
+                    </li>
+                    <li>
+                        Update Method
+                    </li>
+                    <li>
+                        Command
+                    </li>
+                    <li>
+                        Observer
+                    </li>
+                    <li>
+                        Component
+                    </li>
+                    <li>
+                        State
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>   
+        <div class="paper">
+            <h2>The Game</h2>
+            <div class="half">
+                <p>
+                    The game I was given to recreate was Pacman. The different gamemodes had to be filled in in the
+                    following way:
+                <ul>
+                    <li>
+                        Singleplayer: The normal way to play pacman. The player collects the pac dots and the power
+                        pellets
+                        while the ghosts are trying to catch them.
+                    </li>
+                    <li>
+                        Co-op: The same as singleplayer, but with two players instead of one.
+                    </li>
+                    <li>
+                        Versus: One player plays the role of pacman and plays as normal, and the other possesses one of
+                        the
+                        ghosts and tries to hunt down the player.
+                    </li>
+                </ul>
+            </div>
+
+            </p>
+            <div class="half">
+                <image class="paper-image" src="2DEngine/2DEngineMenu.png" alt="Pacman Menu" />
+            </div>
+        </div>
+        <div class="paper">
+            <h2>Conclusion</h2>
+            <div class="full">
+                <p>
+                    It was very interesting to see how the inner workings of an engine are written.
+                    At the start of the project, some of the patterns did not seem that useful,
+                    but once I started implementing them in the engine, it became clear why they are used.
+                    Setting up The different programming patterns may seem overcomplicated for what it's worth,
+                    but once it is, it is the key to working cleanly in a long-term project.
+                </p>
+            </div>
+        </div>
+    </div>
     <footer>
         <div class="footer-body">
             <hr>
             <br>
-            &#169; <script>document.write(new Date().getFullYear())</script> - Jonathan Menschaert
+            &#169;
+            <script>document.write(new Date().getFullYear())</script> - Jonathan Menschaert
         </div>
     </footer>
 </body>
+
 </html>

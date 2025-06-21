@@ -1,0 +1,27 @@
+.icon-container {
+    position: fixed;
+    right: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.icon-box {
+    display: block;
+    border: 3px solid var(--primcolor);
+    background: var(--primcolor);
+    border-radius: 75px;
+    margin: 5px;
+}
+
+.icon {
+    width: 75px;
+    height: 75px;
+    border-radius: 75px;
+    
+}
+
+a:hover.icon-box {
+    border: 3px solid var(--seccolor);
+    background: var(--seccolor);
+}
