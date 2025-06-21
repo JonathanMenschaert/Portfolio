@@ -132,12 +132,10 @@ hr {
     max-height: 350px;
     margin: 20px ;
     overflow: hidden;
-    float: left;
     border-radius: 15px;
     border-color: var(--primcolor);
     border-width: 3px;
     border-style: solid;
-    position: relative;
   }
 
   .window-box {

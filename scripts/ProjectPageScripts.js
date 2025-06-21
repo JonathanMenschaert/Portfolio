@@ -17,15 +17,15 @@ function createProjectList(projectArray)
     {
         let projectObj = projectArray[i];
         
-        htmlString += `<a href="${projectObj["link"] ?? defaultLink}"} class="entry-box">`;
-        htmlString += "<div class='entry-box-divider'>";
-        htmlString += `<image class="entry-box-image" src="${projectObj["thumbnail"] ?? defaultThumbnail}"></image>`;
-        htmlString += `<div class="tag-container">`;
+        htmlString += `<a href="${projectObj["link"] ?? defaultLink}"} class="project-box">`;
+        htmlString += "<div class='project-box-divider'>";
+        htmlString += `<image class="project-box-thumbnail" src="${projectObj["thumbnail"] ?? defaultThumbnail}"></image>`;
+        htmlString += `<div class="project-tag-container">`;
 
         tags = projectObj["tags"] ?? [];
         for (let tagIdx = 0; tagIdx < tags.length; tagIdx++)
         {
-            htmlString += `<div class="tag"><h1>${tags[tagIdx]}</h1></div>`;
+            htmlString += `<div class="project-tag"><h1>${tags[tagIdx]}</h1></div>`;
         }
         htmlString += `</div></div><div><h1>${projectObj["name"] ?? defaultName}</h1>`;
         htmlString += `<h2>${projectObj["description"] ?? defaultDesc}</h2></div></a>`;
