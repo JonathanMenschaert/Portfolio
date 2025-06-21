@@ -1,13 +1,3 @@
-.main-window a:hover {
-    background: var(--seccolor);
-    border-color: var(--seccolor);
-}
-
-.main-window a {
-    text-decoration: none;
-    color: var(--textcolor);
-}
-
 .project-box {
     background-color: var(--primcolor);
     max-width: 440px;

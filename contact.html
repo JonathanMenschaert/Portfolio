@@ -7,53 +7,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="icon" type="image/x-icon" href="icons/eye-logo.png">
-    <link rel="stylesheet" href="PortfolioStyle.css">
+    <!-- <link rel="stylesheet" href="PortfolioStyle.css"> -->
+    <link rel="stylesheet" href="style/GeneralStyle.css">
+    <link rel="stylesheet" href="style/NavbarStyle.css">
+    <link rel="stylesheet" href="style/ContactStyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="PortfolioScripts.js"></script>
+    <script src="./scripts/GeneralScripts.js"></script>
 </head>
+
 <body>
-    <div class="navbar" id="NavBar">        
-        <a href=index.html>Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-        <a href="about.html">About</a>
-        <a href="javascript::void(0);" class="menu-icon" onclick="switchNavBar()">
-            <i class="fa fa-bars"></i>
-        </a>        
-    </div>   
-    <div class="main-window">
-        <div class="content-box">
-            <br><br><br><br>  
-            <div class="content-box-center">
-                <div class="div-small">
-                    <p id="Contact">
-                        You can find me at the following links:
-                        <hr>
-                    </p>
-                </div>                    
-                   
-            </div> 
-            <br><br>  
-            <div class="content-box-images">
-                <a class="window-box icon-scaler" href="https://github.com/JonathanMenschaert" target="_blank" rel="noopener noreferrer" >
-                    <img class="icon-scaler" src="icons/github-mark.png"/>
-                </a>
-                <a class="window-box icon-scaler" href="https://www.linkedin.com/in/jonathan-m-1557181b8/" target="_blank" rel="noopener noreferrer" >
-                    <img class="icon-scaler" src="icons/linkedin_icon.png"/>
-                </a>
-                <a class="window-box icon-scaler" href="https://jonathanmenschaert.itch.io/" target="_blank" rel="noopener noreferrer" >
-                    <img class="icon-scaler" src="icons/itch-io.svg"/>
-                </a>
-            </div>
-                
+    <div class="navbar-container">
+        <div class="navbar" id="NavBar" onmouseleave="activateNavbar(false);">
+            <a href=index.html>Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+            <a href="#" class="menu-icon" onmouseenter="activateNavbar(true);">
+                <i class="fa fa-bars"></i>
+            </a>
         </div>
-    </div>   
+    </div>
+    <div class="main-window">
+        <div class="max-width">
+            <p>
+                You can find me at the following links:
+                <hr>
+            </p>
+        </div>
+
+        <br><br>
+        <div class="icon-box">
+            <a class="icon" href="https://github.com/JonathanMenschaert" target="_blank"
+                rel="noopener noreferrer">
+                <img src="icons/github-mark.png" />
+            </a>
+            <a class="icon" href="https://www.linkedin.com/in/jonathan-m-1557181b8/" target="_blank"
+                rel="noopener noreferrer">
+                <img src="icons/linkedin_icon.png" />
+            </a>
+            <a class="icon" href="https://jonathanmenschaert.itch.io/" target="_blank"
+                rel="noopener noreferrer">
+                <img src="icons/itch-io.svg" />
+            </a>
+        </div>
+
+    </div>
+    </div>
     <footer>
         <div class="footer-body">
             <hr>
             <br>
-            &#169; <script>document.write(new Date().getFullYear())</script> - Jonathan Menschaert
+            &#169;
+            <script>document.write(new Date().getFullYear())</script> - Jonathan Menschaert
         </div>
     </footer>
 </body>
+
 </html>

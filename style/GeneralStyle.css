@@ -2,10 +2,10 @@
   --bgcolor: #705545;
   --primcolor: #E9D9B8;
   --seccolor: #CEC4A9;
-  --textcolor: #49381B; 
+  --textcolor: #49381B;
   --texthovercolor: #CEC4A9;
   --shadowcolor: #70554560;
-} 
+}
 
 /*:root {
   --bgcolor: #272829;
@@ -16,11 +16,11 @@
 }*/
 
 body {
-    background-color:var(--bgcolor);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    font-family: Arial;
+  background-color: var(--bgcolor);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial;
 }
 
 hr {
@@ -30,32 +30,45 @@ hr {
 }
 
 footer {
-    margin-top: auto;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
+  margin-top: auto;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
 }
 
-.footer-body{
-    width: 50%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: var(--primcolor);
-    text-align: center;
-    justify-content: center;   
+.footer-body {
+  width: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: var(--primcolor);
+  text-align: center;
+  justify-content: center;
 }
 
 .main-window {
-    margin-left: 5%;
-    margin-right: 5%;
-    overflow: hidden;
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
+  margin-left: 5%;
+  margin-right: 5%;
+  overflow: hidden;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.main-window a:hover {
+  background: var(--seccolor);
+  border-color: var(--seccolor);
+}
+
+.main-window a {
+  text-decoration: none;
+  color: var(--textcolor);
 }
 
 .hide-element {
   display: none;
 }
 
+.max-width {
+  width: 100%;
+}
