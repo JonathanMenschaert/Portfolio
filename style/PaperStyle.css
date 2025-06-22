@@ -1,6 +1,7 @@
 .paper {
     background: var(--primcolor);
     color: var(--textcolor);
+    border: 4px solid var(--textcolor);
     border-radius: 15px;
     width: 70%;
     justify-content: center;
@@ -78,8 +79,9 @@ a.paper-button {
 }
 
 a:hover.paper-button {
-    background: var(--textcolor);
-    color: var(--seccolor);
+    border: 3px solid var(--textcolor);
+    margin-bottom: 12px;
+    margin-top: 12px;
 }
 
 .paper-image {

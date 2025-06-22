@@ -61,7 +61,7 @@ footer {
 
 .main-window a:hover {
   background: var(--seccolor);
-  border-color: var(--seccolor);
+  border-color: var(--textcolor);
 }
 
 .main-window a {

@@ -5,7 +5,7 @@
     margin: 20px;
     overflow: hidden;
     border-radius: 15px;
-    border-color: var(--primcolor);
+    border-color: var(--textcolor);
     border-width: 3px;
     border-style: solid;
     position: relative;
