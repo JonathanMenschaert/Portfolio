@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pyramid</title>
+    <link rel="icon" type="image/x-icon" href="../icons/eye-logo.png">
+    <link rel="stylesheet" href="../PortfolioStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../PortfolioScripts.js"></script>
+</head>
+<body>
+    <div class="navbar" id="NavBar">        
+        <a href="../index.html">Home</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../about.html">About</a>
+        <a href="javascript::void(0);" class="menu-icon" onclick="switchNavBar()">
+            <i class="fa fa-bars"></i>
+        </a>        
+    </div>  
+    <div class="main-window">
+        <div class="content-box">
+            <br><br>           
+            <p>
+                <h1>Pyramid</h1><br>
+                
+            </p>  
+            <div class="content-box-center">
+                <div class="icon-box">
+                    <a class="window-box icon" href="https://github.com/JonathanMenschaert/WorldEngine/tree/main/WorldEngine/Plugins/Treelith" title="Redirect to Github Page of this project" target="_blank" rel="noopener noreferrer" >
+                        <img class="icon" src="../icons/github-mark.png"/>
+                    </a>
+                </div>                
+            </div> 
+            <h2>
+                Goal
+            </h2>
+            <div class="content-box-center">
+                <div class="div-center">
+                    <div class="div-large">
+                        <p>               
+                            Using the space colonization algorithm to procedurally generate natural looking trees from scratch.                                           
+                        </p>   
+                    </div> 
+                </div> 
+            </div> 
+            <div class="content-box-center">
+                <div class="div-center">
+                    <div class="div-small">
+                        <image class="entry-box-image" src="Treelith/Treelith2.png" alt="Treelilth Image" />
+                    </div>  
+                </div> 
+            </div> 
+            <h2>
+                Scope
+            </h2>
+            <div class="content-box-center">
+                <div class="div-center">
+                    <div class="div-small">
+                        <p>               
+                            Despite this plugin being part of a bigger project, it is important to state the scope of it.<br>
+                            The plugin will be limited to generating only trees and no other types of foliage. <br>
+                            However, within those bounds, there are still a lot of tree species that can be generated, which also means that the code needs to be able to support that in some way.<br>
+                            The variables that control what type of tree is generated should be able to be adjusted from the editor via a data asset.                    
+                        </p>   
+                    </div>  
+                     <div class="div-small">
+                        <image class="entry-box-image" src="Treelith/Treelith_Test.png" alt="Treelith Image" />
+                    </div>
+                </div> 
+            </div>
+            <h2>
+                Space Colonization Algorithm
+            </h2>
+            <div class="content-box-center">
+                <div class="div-center">
+                    <div class="div-large">
+                        <p>               
+                            The space colonization algorithm is the algorithm this project relies on. The algorithm is designed to occupy empty space, which is essentially how trees and plants usually grow.<br>
+                            The algorithm first generates a series of randomized endpoints, or leaves, where the branches will be growing towards. Those endpoints can be generated anywhere, but of course, they need to be within range of the branches. <br>
+                            Based on this principle, a first step can be implemented where the tree starting point is not in range of the endpoints. This way, a trunk can be generated before the algorithm starts generating the branches.<br>
+                            After the optional trunk is generated, the branches grow in cycles, each time checking what leaves are in range and taking the average direction of them. That is the direction the next branch will grow in.<br>
+                            Each branch can have zero or more child branches, depending on how the endpoints are spread around. Once a branch reaches the acceptance radius of an endpoint, the endpoint is removed.<br>
+                            The cycle continues can continue forever, even if there are no viable endpoints in range, so to ensure the algorithm stops, I included a variable that contains a maximum amount of cycli.<br><br>
+                        </p>   
+                    </div> 
+                    <div class="div-small">
+                        <image class="entry-box-image" src="Treelith/Treelith.png" alt="Treelith Image" />
+                    </div>    
+                </div> 
+            </div>
+            <h2>
+                The Code
+            </h2>
+            <div class="content-box-center">
+                <div class="div-center">
+                    <div class="div-large">
+                        <p> 
+                            As described in the space colonization algorithm, I first generate a set of endpoints, based on data from the data asset. Both the amount of endpoints and the randomization method used can be controlled from there.<br>
+                            I then generate the root and trunk until the first endpoint comes in range. After that, I start the growing cycles, which build upon the existing trunk and newly generated branches.<br>
+                            Once that is finished, I finalize the tree skeleton, and check what branches are eligible to generate leafcardmeshes later on in the process.<br>
+                            Then the mesh generation starts. The procedural mesh is generated using the UProceduralMeshComponent from Unreal Engine.<br>
+                            The branch vertex circles are generated based on the branch direction and the radius is based on how high they are up the tree. Additional to that, I have added a curve in the data asset to make the radius a bit more irregular.<br>
+                            To ensure rotations are always done correctly, I am using quaternions for the vertex rotation calculations. UV calculations are done based on how far along the circle the vertex is, and how high up the tree, to ensure a continuous texture.<br>
+                            Normals and Tangents are for now calculated by the engine, but that could change in the future. <br><br>
+                            Leaves are done in a slightly different way. Due to how irregular leafcards can be, the necessary information, such as the vertices and UVs, is stored in a seperate data asset, so the code can pull the necessary data without having to spend time calculating it.<br>
+                            Leafcards can generate on or along the selected branches. The amount and individual rotations can also be set from a data asset.
+                            <br><br>
+                        </p>   
+                    </div>  
+                     <div class="div-large">
+                        <image class="entry-box-image" src="Treelith/Treelith_DataAsset.png" alt="Treelith Image" />
+                    </div> 
+                </div> 
+            </div>    
+            <h2>
+                Difficulties & Conclusion
+            </h2>
+            <div class="content-box-center">
+                <div class="div-center">
+                    <div class="div-large">
+                        <p>               
+                           A big issue that popped up at the start, had to do with branch twisting. The vertices on one end did not line up correctly with the ones on the other end. <br>
+                           This caused the branches to look very strange, not in the least because the lighting was completely wrong on those. <br>
+                           There was also a fair share of problems when adding the UV calculations that caused stretching or other weird issues. 
+                           Some of those were related to a misunderstanding on how the Unreal component handles the data.<br><br>
+
+                           In general, it was very fun to try out a new algorithm as base to procedurally generate tree meshes, and I have a newfound appreciation for quaternions, <br>
+                           as those help a lot when dealing with complex calculations involving rotations.<br><br>
+                        </p>   
+                    </div>  
+                </div> 
+            </div>
+            <h2>
+                What's Next?
+            </h2>
+            <div class="content-box-center">
+                <div class="div-center">
+                    <div class="div-large">
+                        <p>               
+                           Currently, the trees do not actually have roots, just the illusion of them by the irregularities in the trunk, so the next step could be to use the same algorithm to create roots.<br>
+                           The leafcard is also just a plane, so more types of leafcards could help make the generated trees look a lot better.<br>
+                           I mentioned at the start that the scope would be limited to just trees, but now that I know how this works, I could add more things to the plugin.
+                        </p>   
+                    </div>  
+                </div> 
+            </div>              
+        </div>        
+    </div>   
+    <footer>
+        <div class="footer-body">
+            <hr>
+            <br>
+            &#169; <script>document.write(new Date().getFullYear())</script> - Jonathan Menschaert
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,6 +1,17 @@
 {
     "type": "thumbnail",
     "data": [
+	{
+            "name": "Treelith",
+            "description": "Plugin for Unreal engine to procedurally generate trees based on the space colonization algorithm. In Progress.",
+            "link": "projects/Treelith.html",
+            "thumbnail": "projects/Treelith/Treelith.png",
+            "tags": [
+                "Unreal",
+                "C++",
+                "Blueprint"
+            ]
+        },
         {
             "name": "Pyramid",
             "description": "Recreation of a boardgame in Unreal Engine",
