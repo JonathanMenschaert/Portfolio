@@ -5,10 +5,14 @@
     margin: 20px;
     overflow: hidden;
     border-radius: 15px;
-    border-color: var(--textcolor);
+    border-color: var(--bordercolor);
     border-width: 3px;
     border-style: solid;
     position: relative;
+}
+
+.project-box:hover {
+    color: var(--texthovercolor);
 }
 
 .project-box h1 {

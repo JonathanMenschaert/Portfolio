@@ -33,6 +33,11 @@
   display: flex;
 }
 
+.window-box:hover {   
+  background: var(--textcolor);
+  border-color: var(--textcolor);
+}
+
 .slide-img-container {
     overflow: hidden;
     height: 100%;
@@ -88,7 +93,7 @@
 }
 
 .nav-btn:hover {
-  color: var(--texthovercolor);
+  color: var(--seccolor);
 }
 
 
@@ -174,6 +179,10 @@
   opacity: 0%;
 }
 
+.window-box:hover .title-container h2 {
+  color: var(--texthovercolor);
+}
+
 .title-opacity-100 {
   opacity: 100%;
 }
@@ -201,4 +210,8 @@
 .svg-block .top {
   position: absolute;
   top: 0px;
+}
+
+.window-box:hover .svg-block .top {
+  color: var(--seccolor);
 }

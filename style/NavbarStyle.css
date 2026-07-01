@@ -10,8 +10,7 @@
     background: var(--primcolor);
     overflow: hidden;
     border-radius: 15px;
-    box-shadow: 0px 5px 4px var(--shadowcolor), 0px -2px 4px var(--shadowcolor);
-     border: 5px solid var(--textcolor);
+    border: 5px solid var(--bordercolor);
     margin-bottom: 25px;
     justify-content: center;
     display: flex;

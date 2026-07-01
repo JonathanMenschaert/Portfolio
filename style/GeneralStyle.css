@@ -1,9 +1,10 @@
 :root {
-  --bgcolor: #705545;
-  --primcolor: #E9D9B8;
-  --texthovercolor: #9F8D77;
-  --textcolor: #49381B;
+  --bgcolor: #1C1B22;
+  --primcolor: #2B2A33;
+  --texthovercolor: #555368;
+  --textcolor: #9F8D77;
   --seccolor: #CEC4A9;
+  --bordercolor: #3D3B51;
   --shadowcolor: #70554560;
 }
 
