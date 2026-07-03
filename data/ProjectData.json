@@ -12,7 +12,6 @@
                 "Blueprint"
             ]
         },
-
         {
             "name": "Pyramid",
             "description": "Recreation of a boardgame in Unreal Engine",
