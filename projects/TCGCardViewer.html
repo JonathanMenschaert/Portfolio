@@ -7,165 +7,215 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TCG Pokemon Card Viewer</title>
     <link rel="icon" type="image/x-icon" href="../icons/eye-logo.png">
-    <link rel="stylesheet" href="../PortfolioStyle.css">
+    <link rel="stylesheet" href="../style/GeneralStyle.css">
+    <link rel="stylesheet" href="../style/NavbarStyle.css">
+    <link rel="stylesheet" href="../style/PaperStyle.css">
+    <link rel="stylesheet" href="../style/ProjectStyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="../PortfolioScripts.js"></script>
+    <script src="../scripts/GeneralScripts.js"></script>
 </head>
+
 <body>
-    <div class="navbar" id="NavBar">        
-        <a href="../index.html">Home</a>
-        <a href="../projects.html">Projects</a>
-        <a href="../contact.html">Contact</a>
-        <a href="../about.html">About</a>
-        <a href="javascript::void(0);" class="menu-icon" onclick="switchNavBar()">
-            <i class="fa fa-bars"></i>
-        </a>        
-    </div>  
+    <div class="navbar-container">
+        <div class="navbar" id="NavBar" onmouseleave="activateNavbar(false);">
+            <a href="../index.html">Home</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../contact.html">Contact</a>
+            <a href="../about.html">About</a>
+            <a href="#" class="menu-icon" onmouseenter="activateNavbar(true);">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
     <div class="main-window">
-        <div class="content-box">  
-            <br><br>  
-            <h1>
-                TCG Pokemon Card Viewer
-            </h1>                    
-            <div class="content-box-center">
-                <div class="icon-box">
-                    <a class="window-box icon" href="https://github.com/JonathanMenschaert/Pokemon-TCG-Card-Viewer" title="Redirect to Github Page of this project" target="_blank" rel="noopener noreferrer" >
-                        <img class="icon" src="../icons/github-mark.png"/>
-                    </a>
-                </div>                
-            </div>
-            <h2>
+        <p>
+        <h1>TCG Pokemon Card Viewer</h1>
+        </p>
+        <div class="shortcut-container">
+            <h1> Content </h1>
+            <ul class="shortcut-list">
+                <a href="#Goal">
+                    <li>
+                        Goal
+                    </li>
+                </a>
+                <a href="#Introduction">
+                    <li>
+                        Introduction
+                    </li>
+                </a>
+                <a href="#Overview">
+                    <li>
+                        Overview Page
+                    </li>
+                </a>
+                <a href="#Detail">
+                    <li>
+                        Detail Page
+                    </li>
+                </a>
+                <a href="#Switching">
+                    <li>
+                        Switching Repositories
+                    </li>
+                </a>
+                <a href="#Conclusion">
+                    <li>
+                        Conclusion
+                    </li>
+                </a>
+                <a href="#Sources">
+                    <li>
+                        Sources
+                    </li>
+                </a>
+            </ul>
+        </div>
+        <div class="icon-container">
+            <a class="icon-box icon" href="https://github.com/JonathanMenschaert/Pokemon-TCG-Card-Viewer"
+                title="Redirect to Github Page of this project" target="_blank" rel="noopener noreferrer">
+                <img class="icon" src="../icons/github-mark.png" />
+            </a>
+        </div>
+        <div class="paper">
+            <h2 id="Goal">
                 Goal
             </h2>
-            <div class="content-box-center">
-                <div class="div-center">
-                    <div class="div-large">
-                        <p>               
-                            Building a tool using C# and XAML with the MVVM pattern. 
-                            The tool should have online and offline mode. For the online functionality, an external API has to be used to get the data.
-                            The data for the offline functionality should be gathered via JSON files.
-                        </p>   
-                    </div>    
-                </div> 
-            </div>           
-            <h2>
-                Introduction
-            </h2> 
-            <div class="content-box-center">
-                <div class="div-center">
-                    <div class="div-large">
-                        <p>               
-                            Games often have dozens, if not hundreds of items the player can collect and use. In such a case it can be very useful to be able to view the item stats so the player knows if the item is worth collecting. Moreso, having a list of all the items and their stats currently in the game is also useful during development of said game.
-                            That is why I decided to use the Pokemon TCG API for this project, as it is a card game with thousands of cards. This means that the need for a central application to view the different cards available is very high for both the developer of the computer game and the player.                
-                        </p>   
-                    </div>    
-                </div>
+            <div class="full">
+                <p>
+                    Building a tool using C# and XAML with the MVVM pattern.
+                    The tool should have online and offline mode. For the online functionality, an external API has
+                    to be used to get the data.
+                    The data for the offline functionality should be gathered via JSON files.
+                </p>
             </div>
-            <h2>
-                Overview Page
-            </h2>  
-            <div class="content-box-center">
-                <div class="div-center">
-                    <div class="div-small">
-                        <p>               
-                            The overview page gives you access to a search area where you can set the following search queries:
-                            
-                            <ul>
-                                <li>Card Type (e.g. Colorless)</li>
-                                <li>Card Subtype (e.g. Stage 1)</li>
-                                <li>Page Size</li>
-                                <li>Page Number</li>
-                                <li>Card Name (e.g. Charizard or Char*)</li>
-                            </ul>
-                            <br>
-                        </p>
-                        <p>
-                            The name field can contain the exact card name, but can also have a wildcard character (*). The wildcard character will match with any number of characters, and can be anywhere within the name. If you search for "C*", it will look for any card name starting with the letter 'C'.
-                        </p>                      
-                    </div>  
-                    
-                    <div class="div-small">
-                        <image class="entry-box-image" src="CardViewer/OverviewPage.png" alt="Overview Page" />                      
-                    </div>
-                </div>
-            </div>
-             
-            <h2>
-                Detail Page
-            </h2>  
-            <div class="content-box-center">
-                <div class="div-center">
-                    <div class="div-small">
-                        <p>               
-                            The detail page will give you more info on the card's stats, such as the classification. If the card has it, the attacks, abilities and rules will also be dynamically displayed. The card series logo is displayed under the card.
-                        </p>   
-                    </div> 
-                    <div class="div-small">
-                        <image class="entry-box-image" src="CardViewer/DetailPage.png" alt="Overview Page" />                      
-                    </div>     
-                </div>
-            </div> 
-            <h2>
-                Switching Repositories
-            </h2>  
-            <div class="content-box-center">
-                <div class="div-center">
-                    <div class="div-large">
-                        <p> 
-                            The tool contains a local mock-up repository in order to test out the features offline. Both the online and offline repository contain the same functionality.              
-                            You can easily switch between the repositories via the UI. Simply select the "Search" icon in the left sidebar to use the API repository and the "Collection" icon to use the local repository.
-                        </p>   
-                    </div>  
-                </div> 
-            </div>
-            <h2>
-                Conclusion
-            </h2>  
-            <div class="content-box-center">
-                <div class="div-center">
-                    <div class="div-large">
-                        <p> 
-                            I had written a project in C# before, but this was my first time using XAML, which went quite well. 
-                            I would have liked to make the side buttons a bit more user-friendly, but I could not find a way to accomplish that in XAML without breaking the MVVM pattern.
-                            
-                            Designing the layout of the page was part of the assignment, but by far my least favourite part. I did enjoy figuring out how the API works and adding features based on that, and adding the same features afterwards in the offline repository.
-                            Unfortunately, some combinations of search parameters returned wrong or no data, so I had to make sure that the parameters you could select were always compatible with each other.
-
-                        </p>   
-                    </div>  
-                </div> 
-            </div>             
-            <h2>
-                Sources
-            </h2>  
-            <div class="content-box-center">
-                <div class="div-center">
-                    <div class="div-large">
-                        <p> 
-                            <ul>
-                                <li>
-                                    API main page: <a href="https://pokemontcg.io/" title="Redirect to spriters-resource" target="_blank" rel="noopener noreferrer" >
-                                        Pokemon TCG
-                                    </a>
-                                </li>
-                                <li>
-                                    API Documentation: <a href=" https://docs.pokemontcg.io/" title="Redirect to spriters-resource" target="_blank" rel="noopener noreferrer" >
-                                        Pokemon TCG Docs
-                                    </a>
-                                </li>
-                            </ul>
-                        </p>   
-                    </div>  
-                </div> 
-            </div>    
         </div>
-    </div>   
+        <div class="paper">
+            <h2 id="Introduction">
+                Introduction
+            </h2>
+            <div class="full">
+                <p>
+                    Games often have dozens, if not hundreds of items the player can collect and use. In such a case
+                    it can be very useful to be able to view the item stats so the player knows if the item is worth
+                    collecting. Moreso, having a list of all the items and their stats currently in the game is also
+                    useful during development of said game.
+                    That is why I decided to use the Pokemon TCG API for this project, as it is a card game with
+                    thousands of cards. This means that the need for a central application to view the different
+                    cards available is very high for both the developer of the computer game and the player.
+                </p>
+            </div>
+        </div>
+        <div class="paper">
+            <h2 id="Overview">
+                Overview Page
+            </h2>
+            <div class="half">
+                <p>
+                    The overview page gives you access to a search area where you can set the following search
+                    queries:
+
+                <ul>
+                    <li>Card Type (e.g. Colorless)</li>
+                    <li>Card Subtype (e.g. Stage 1)</li>
+                    <li>Page Size</li>
+                    <li>Page Number</li>
+                    <li>Card Name (e.g. Charizard or Char*)</li>
+                </ul>
+                <br>
+                </p>
+                <p>
+                    The name field can contain the exact card name, but can also have a wildcard character (*). The
+                    wildcard character will match with any number of characters, and can be anywhere within the
+                    name. If you search for "C*", it will look for any card name starting with the letter 'C'.
+                </p>
+            </div>
+
+            <div class="half">
+                <image class="paper-image" src="CardViewer/OverviewPage.png" alt="Overview Page" />
+            </div>
+        </div>
+        <div class="paper">
+            <h2 id="Detail">
+                Detail Page
+            </h2>
+            <div class="half">
+                <p>
+                    The detail page will give you more info on the card's stats, such as the classification. If the
+                    card has it, the attacks, abilities and rules will also be dynamically displayed. The card
+                    series logo is displayed under the card.
+                </p>
+            </div>
+            <div class="half">
+                <image class="paper-image" src="CardViewer/DetailPage.png" alt="Overview Page" />
+            </div>
+        </div>
+        <div class="paper">
+            <h2 id="Switching">
+                Switching Repositories
+            </h2>
+            <div class="full">
+                <p>
+                    The tool contains a local mock-up repository in order to test out the features offline. Both the
+                    online and offline repository contain the same functionality.
+                    You can easily switch between the repositories via the UI. Simply select the "Search" icon in
+                    the left sidebar to use the API repository and the "Collection" icon to use the local
+                    repository.
+                </p>
+            </div>
+        </div>
+        <div class="paper">
+            <h2 id="Conclusion">
+                Conclusion
+            </h2>
+            <div class="full">
+                <p>
+                    I had written a project in C# before, but this was my first time using XAML, which went quite
+                    well.
+                    I would have liked to make the side buttons a bit more user-friendly, but I could not find a way
+                    to accomplish that in XAML without breaking the MVVM pattern.
+
+                    Designing the layout of the page was part of the assignment, but by far my least favourite part.
+                    I did enjoy figuring out how the API works and adding features based on that, and adding the
+                    same features afterwards in the offline repository.
+                    Unfortunately, some combinations of search parameters returned wrong or no data, so I had to
+                    make sure that the parameters you could select were always compatible with each other.
+
+                </p>
+            </div>
+        </div>
+        <div class="paper">
+            <h2 id="Sources">
+                Sources
+            </h2>
+            <div class="full">
+                <p>
+                <ul>
+                    <li>
+                        API main page: <a href="https://pokemontcg.io/" title="Redirect to spriters-resource"
+                            target="_blank" rel="noopener noreferrer">
+                            Pokemon TCG
+                        </a>
+                    </li>
+                    <li>
+                        API Documentation: <a href=" https://docs.pokemontcg.io/" title="Redirect to spriters-resource"
+                            target="_blank" rel="noopener noreferrer">
+                            Pokemon TCG Docs
+                        </a>
+                    </li>
+                </ul>
+                </p>
+            </div>
+        </div>
+    </div>
     <footer>
         <div class="footer-body">
             <hr>
             <br>
-            &#169; <script>document.write(new Date().getFullYear())</script> - Jonathan Menschaert
+            &#169;
+            <script>document.write(new Date().getFullYear())</script> - Jonathan Menschaert
         </div>
     </footer>
 </body>
+
 </html>
