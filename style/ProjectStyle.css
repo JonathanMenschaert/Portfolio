@@ -10,7 +10,7 @@
 
 .icon-box {
     display: flex;
-    border: 4px solid var(--textcolor);
+    border: 4px solid var(--bordercolor);
     background: var(--texthovercolor);
     border-radius: 75px;
     margin: 5px;
@@ -28,8 +28,8 @@ a:hover.icon-box {
 }
 
 .shortcut-container {
-    background: var(--texthovercolor);
-    border: 4px solid var(--textcolor);
+    background: var(--primcolor);
+    border: 4px solid var(--bordercolor);
     border-radius: 15px;
     position: fixed;
     width: 15%;
@@ -60,7 +60,7 @@ a:hover.icon-box {
     color: var(--textcolor);
 }
 
-.shortcut-container a:hover {
-    color: var(--primcolor);
+.shortcut-container li:hover {
+    color: var(--texthovercolor);
     background: transparent;
 }
