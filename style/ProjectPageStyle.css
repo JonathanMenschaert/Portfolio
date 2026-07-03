@@ -25,6 +25,8 @@
     font-size: 15px;
     text-align: center;
     text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .project-box-divider {
