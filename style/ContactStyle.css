@@ -10,6 +10,14 @@
     width: 15%
 }
 
+.main-window p {
+    color: var(--textcolor);
+}
+
+.main-window hr {
+    background: var(--textcolor);
+}
+
 .icon-box {
    display: flex;
    justify-content: center;
