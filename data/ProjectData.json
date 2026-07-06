@@ -1,7 +1,18 @@
 {
     "type": "thumbnail",
     "data": [
-	{
+        {
+            "name": "DroneTanks",
+            "description": "Drone Tanks is a fast-paced 3D roguelite arena combat game developed by indie studio Ludum Elite.",
+            "link": "projects/DroneTanks.html",
+            "thumbnail": "projects/DroneTanks/ThumbnailImage.png",
+            "tags": [
+                "Unreal",
+                "C++",
+                "Blueprint"
+            ]
+        },
+	    {
             "name": "Treelith",
             "description": "Plugin for Unreal engine to procedurally generate trees based on the space colonization algorithm. In Progress.",
             "link": "projects/Treelith.html",
