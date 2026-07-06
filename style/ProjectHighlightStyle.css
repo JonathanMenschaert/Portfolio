@@ -1,11 +1,11 @@
 .window-box {
     background-color: var(--primcolor);
     display: flex;
-    max-width: 800px;
-    max-height: 525px;
+    max-width: 1000px;
+    max-height: 630px;
     margin: 5px ;
     border-radius: 15px;
-    border-color: var(--primcolor);
+    border-color: var(--bordercolor);
     border-width: 3px;
     border-style: solid;
     position: relative;
