@@ -72,10 +72,16 @@ a.paper-button {
 
 .half {
     width: 48%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .full {
     width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 a:hover.paper-button {
@@ -85,13 +91,13 @@ a:hover.paper-button {
 }
 
 .paper-image {
-    width: 100%;
+    max-width: 100%;
     border-radius: 15px;
     border: 3px solid var(--seccolor);
 }
 
 .paper-frame {
-    width: 100%;
+    max-width: 100%;
     border-radius: 15px;
     border: 3px solid var(--seccolor);
 }
